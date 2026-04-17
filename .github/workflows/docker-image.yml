@@ -25,5 +25,5 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker push my-dockerhub-youssefhemdane/smd:${{ github.sha }}
-          docker push my-dockerhub-youssefhemdane/smd:latest
+          docker push my-dockerhub-dckr_pat_Z6gw5bI47PyyDde-BaNfBc4q_5U/smd:${{ github.sha }}
+          docker push my-dockerhub-dckr_pat_Z6gw5bI47PyyDde-BaNfBc4q_5U/smd:latest
