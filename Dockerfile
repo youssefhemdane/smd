@@ -1,10 +1,5 @@
-name: Build Docker image
-run: |
-docker build -t my-dockerhub-youssefhemdane/my-app:${{ github.sha }} .
-docker tag my-dockerhub-youssefhemdane/my-app:${{ github.sha }} my-dockerhub-youssefhemdane/my-
-app:latest
+FROM ubuntu:latest
 
-- name: Push Docker image
-run: |
-docker push my-dockerhub-youssefhemdane/my-app:${{ github.sha }}
-docker push my-dockerhub-youssefhemdane/my-app:latest
+ADD watermark.py /smd/watermark.py
+
+CMD ["python3", "/smd/watermark.py"]
