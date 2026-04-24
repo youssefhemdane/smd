@@ -1,0 +1,23 @@
+# Sessions générées par l'API
+sessions/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Résultats et images générées
+results/
+*.wmsession
+
+# Environnements virtuels
+venv/
+env/
+.venv/
+
+# VS Code
+.vscode/
+
+# Images tatouées locales (ne pas versionner)
+*_watermarked.png
+*_reverted.png
