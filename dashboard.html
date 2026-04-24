@@ -670,7 +670,7 @@ new Chart(document.getElementById('dwrChart'),{type:'bar',data:{labels:['PSNR �
 /* ══════════════════════════════════════════════
    WATERMARK MANAGER — REAL API CALLS
 ══════════════════════════════════════════════ */
-const API='http://localhost:5000';
+const API='';
 let _file=null,_fileEx=null,_wmBlob=null,_revertBlob=null;
 
 function wmTab(name,btn){document.querySelectorAll('.wm-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.wm-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById('wm-'+name).classList.add('active');}
