@@ -87,14 +87,12 @@
   }
   @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
 
-  /* LEGEND */
   .legend { display:flex; gap:24px; margin-bottom:40px; }
   .legend-item { display:flex; align-items:center; gap:8px; font-size:11px; text-transform:uppercase; letter-spacing:0.1em; }
   .legend-color { width:24px; height:3px; }
   .legend-color.ga { background:var(--ga); }
   .legend-color.aa { background:var(--aa); }
 
-  /* STAT CARDS */
   .stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:32px; }
   .stat-card {
     background:var(--surface); border:1px solid var(--border);
@@ -124,7 +122,6 @@
   .stat-card:nth-child(3){animation-delay:0.3s;}
   .stat-card:nth-child(4){animation-delay:0.4s;}
 
-  /* SECTION LABEL */
   .section-label {
     font-size:10px; text-transform:uppercase;
     letter-spacing:0.2em; color:var(--text-dim);
@@ -133,7 +130,6 @@
   }
   .section-label::after { content:''; flex:1; height:1px; background:var(--border); }
 
-  /* ── IMAGE COMPARISON SECTION ── */
   .img-section {
     background:var(--surface); border:1px solid var(--border);
     padding:28px; margin-bottom:32px;
@@ -175,176 +171,165 @@
     font-size:14px; color:var(--accent); min-width:32px;
   }
 
-  .canvases-grid {
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
-  }
-  .canvas-wrap {
-    display:flex; flex-direction:column; gap:8px;
-  }
+  .canvases-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .canvas-wrap { display:flex; flex-direction:column; gap:8px; }
   .canvas-label {
     font-size:10px; text-transform:uppercase;
     letter-spacing:0.1em; color:var(--text-dim);
     display:flex; justify-content:space-between; align-items:center;
   }
-  .canvas-label .tag {
-    padding:2px 7px; font-size:9px;
-    border:1px solid; letter-spacing:0.05em;
-  }
+  .canvas-label .tag { padding:2px 7px; font-size:9px; border:1px solid; letter-spacing:0.05em; }
   .canvas-label .tag.ga-tag { border-color:var(--ga); color:var(--ga); }
   .canvas-label .tag.aa-tag { border-color:var(--aa); color:var(--aa); }
   .canvas-label .tag.diff-tag { border-color:#f0c040; color:#f0c040; }
-  canvas.img-canvas {
-    width:100%; aspect-ratio:1/1;
-    border:1px solid var(--border);
-    image-rendering:pixelated;
-    display:block;
-  }
-  .canvas-meta {
-    font-size:10px; color:var(--text-dim); line-height:1.8;
-  }
+  canvas.img-canvas { width:100%; aspect-ratio:1/1; border:1px solid var(--border); image-rendering:pixelated; display:block; }
+  .canvas-meta { font-size:10px; color:var(--text-dim); line-height:1.8; }
   .canvas-meta .bright { color:var(--text-bright); }
 
-  /* PROGRESS BAR */
-  .gen-progress {
-    display:none; margin-bottom:16px;
-    height:3px; background:var(--border); position:relative;
-  }
+  .gen-progress { display:none; margin-bottom:16px; height:3px; background:var(--border); position:relative; }
   .gen-progress.active { display:block; }
-  .gen-progress-bar {
-    height:100%; background:var(--accent);
-    transition:width 0.3s; width:0%;
-  }
+  .gen-progress-bar { height:100%; background:var(--accent); transition:width 0.3s; width:0%; }
 
-  /* ATTACK PREVIEW */
-  .attack-preview {
-    margin-top:24px;
-    display:grid; grid-template-columns:repeat(5,1fr);
-    gap:12px;
-  }
+  .attack-preview { margin-top:24px; display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
   .atk-wrap { display:flex; flex-direction:column; gap:6px; }
-  .atk-label {
-    font-size:9px; text-transform:uppercase;
-    letter-spacing:0.1em; color:var(--text-dim);
-    text-align:center;
-  }
-  canvas.atk-canvas {
-    width:100%; aspect-ratio:1/1;
-    border:1px solid var(--border);
-    image-rendering:pixelated;
-  }
-  .atk-ber {
-    text-align:center; font-size:10px;
-    font-family:'Syne',sans-serif; font-weight:700;
-  }
+  .atk-label { font-size:9px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-dim); text-align:center; }
+  canvas.atk-canvas { width:100%; aspect-ratio:1/1; border:1px solid var(--border); image-rendering:pixelated; }
+  .atk-ber { text-align:center; font-size:10px; font-family:'Syne',sans-serif; font-weight:700; }
 
-  /* CHARTS */
   .charts-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:32px; }
-  .chart-card {
-    background:var(--surface); border:1px solid var(--border);
-    padding:24px; opacity:0; animation:fadeUp 0.6s forwards;
-  }
+  .chart-card { background:var(--surface); border:1px solid var(--border); padding:24px; opacity:0; animation:fadeUp 0.6s forwards; }
   .chart-card:nth-child(1){animation-delay:0.5s;}
   .chart-card:nth-child(2){animation-delay:0.6s;}
   .chart-title { font-family:'Syne',sans-serif; font-size:14px; font-weight:700; color:var(--text-bright); margin-bottom:4px; }
   .chart-desc { font-size:10px; color:var(--text-dim); margin-bottom:20px; line-height:1.6; }
   .chart-wrap { position:relative; height:240px; }
-  .chart-full {
-    background:var(--surface); border:1px solid var(--border);
-    padding:24px; margin-bottom:32px;
-    opacity:0; animation:fadeUp 0.6s 0.7s forwards;
-  }
+  .chart-full { background:var(--surface); border:1px solid var(--border); padding:24px; margin-bottom:32px; opacity:0; animation:fadeUp 0.6s 0.7s forwards; }
   .chart-full .chart-wrap { height:200px; }
 
-  /* TABLE */
-  .table-section {
-    background:var(--surface); border:1px solid var(--border);
-    padding:24px; margin-bottom:32px;
-    opacity:0; animation:fadeUp 0.6s 0.8s forwards;
-  }
+  .table-section { background:var(--surface); border:1px solid var(--border); padding:24px; margin-bottom:32px; opacity:0; animation:fadeUp 0.6s 0.8s forwards; }
   table { width:100%; border-collapse:collapse; font-size:12px; }
   thead tr { border-bottom:2px solid var(--border); }
-  thead th {
-    text-align:left; padding:10px 14px;
-    font-size:10px; text-transform:uppercase;
-    letter-spacing:0.15em; color:var(--text-dim); font-weight:400;
-  }
+  thead th { text-align:left; padding:10px 14px; font-size:10px; text-transform:uppercase; letter-spacing:0.15em; color:var(--text-dim); font-weight:400; }
   thead th.ga-head { color:var(--ga); }
   thead th.aa-head { color:var(--aa); }
   tbody tr { border-bottom:1px solid var(--border); transition:background 0.2s; }
   tbody tr:hover { background:var(--surface2); }
   tbody td { padding:12px 14px; color:var(--text); }
   tbody td:first-child { color:var(--text-bright); font-family:'Syne',sans-serif; font-weight:600; }
-  .win-badge {
-    display:inline-block; padding:2px 8px; font-size:10px;
-    letter-spacing:0.05em;
-    background:rgba(127,255,110,0.1); color:var(--accent3);
-    border:1px solid rgba(127,255,110,0.25);
-  }
+  .win-badge { display:inline-block; padding:2px 8px; font-size:10px; letter-spacing:0.05em; background:rgba(127,255,110,0.1); color:var(--accent3); border:1px solid rgba(127,255,110,0.25); }
   .val-ga { color:var(--ga); font-weight:700; }
   .val-aa { color:var(--aa); font-weight:700; }
 
-  /* PIPELINE */
-  .pipeline {
-    display:grid; grid-template-columns:repeat(5,1fr);
-    gap:0; margin-bottom:32px;
-    opacity:0; animation:fadeUp 0.6s 0.9s forwards;
-  }
-  .pipe-step {
-    background:var(--surface); border:1px solid var(--border);
-    border-right:none; padding:20px 16px; position:relative;
-  }
+  .pipeline { display:grid; grid-template-columns:repeat(5,1fr); gap:0; margin-bottom:32px; opacity:0; animation:fadeUp 0.6s 0.9s forwards; }
+  .pipe-step { background:var(--surface); border:1px solid var(--border); border-right:none; padding:20px 16px; position:relative; }
   .pipe-step:last-child { border-right:1px solid var(--border); }
-  .pipe-step::after {
-    content:'→'; position:absolute;
-    right:-14px; top:50%; transform:translateY(-50%);
-    color:var(--accent); font-size:16px; z-index:2;
-    background:var(--bg); padding:2px 0;
-  }
+  .pipe-step::after { content:'→'; position:absolute; right:-14px; top:50%; transform:translateY(-50%); color:var(--accent); font-size:16px; z-index:2; background:var(--bg); padding:2px 0; }
   .pipe-step:last-child::after { display:none; }
   .pipe-num { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; color:var(--border); line-height:1; margin-bottom:8px; }
   .pipe-name { font-family:'Syne',sans-serif; font-size:11px; font-weight:700; color:var(--text-bright); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px; }
   .pipe-desc { font-size:10px; color:var(--text-dim); line-height:1.6; }
 
-  /* PARAMS */
-  .params-row {
-    display:grid; grid-template-columns:repeat(3,1fr);
-    gap:16px; margin-bottom:32px;
-    opacity:0; animation:fadeUp 0.6s 1.0s forwards;
-  }
-  .param-card {
-    background:var(--surface); border:1px solid var(--border);
-    padding:18px 20px; display:flex; align-items:center; gap:16px;
-  }
+  .params-row { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:32px; opacity:0; animation:fadeUp 0.6s 1.0s forwards; }
+  .param-card { background:var(--surface); border:1px solid var(--border); padding:18px 20px; display:flex; align-items:center; gap:16px; }
   .param-icon { font-size:22px; flex-shrink:0; }
   .param-name { font-size:10px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:4px; }
   .param-val { font-family:'Syne',sans-serif; font-weight:700; font-size:18px; color:var(--accent); }
   .param-note { font-size:10px; color:var(--text-dim); margin-top:2px; }
 
-  footer {
-    border-top:1px solid var(--border); padding-top:24px;
-    display:flex; justify-content:space-between; align-items:center;
-    color:var(--text-dim); font-size:10px;
-    text-transform:uppercase; letter-spacing:0.1em;
-    opacity:0; animation:fadeUp 0.5s 1.1s forwards;
-  }
+  footer { border-top:1px solid var(--border); padding-top:24px; display:flex; justify-content:space-between; align-items:center; color:var(--text-dim); font-size:10px; text-transform:uppercase; letter-spacing:0.1em; opacity:0; animation:fadeUp 0.5s 1.1s forwards; }
   footer a { color:var(--accent); text-decoration:none; }
 
-  /* Spinner */
   @keyframes spin { to { transform:rotate(360deg); } }
-  .spinner {
-    display:inline-block; width:12px; height:12px;
-    border:2px solid var(--border); border-top-color:var(--accent);
-    border-radius:50%; animation:spin 0.8s linear infinite;
-    vertical-align:middle; margin-right:6px;
-  }
+  .spinner { display:inline-block; width:12px; height:12px; border:2px solid var(--border); border-top-color:var(--accent); border-radius:50%; animation:spin 0.8s linear infinite; vertical-align:middle; margin-right:6px; }
+
+  /* ── WATERMARK MANAGER ── */
+  .wm-manager { background:var(--surface); border:1px solid var(--border); padding:28px; margin-bottom:32px; opacity:0; animation:fadeUp 0.6s 1.15s forwards; }
+  .wm-tabs { display:flex; gap:0; margin-bottom:24px; border-bottom:1px solid var(--border); }
+  .wm-tab { padding:10px 22px; font-size:11px; text-transform:uppercase; letter-spacing:0.1em; cursor:pointer; border:none; background:transparent; color:var(--text-dim); font-family:'Space Mono',monospace; border-bottom:2px solid transparent; margin-bottom:-1px; transition:all 0.2s; }
+  .wm-tab:hover { color:var(--text); }
+  .wm-tab.active { color:var(--accent); border-bottom-color:var(--accent); }
+  .wm-panel { display:none; }
+  .wm-panel.active { display:block; }
+  .wm-form { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .wm-field { display:flex; flex-direction:column; gap:6px; }
+  .wm-field label { font-size:10px; text-transform:uppercase; letter-spacing:0.12em; color:var(--text-dim); }
+  .wm-field input, .wm-field select { background:var(--surface2); border:1px solid var(--border); color:var(--text); font-family:'Space Mono',monospace; font-size:12px; padding:9px 12px; outline:none; transition:border-color 0.2s; }
+  .wm-field input:focus, .wm-field select:focus { border-color:var(--accent); }
+  .wm-toggle-row { display:flex; align-items:center; gap:10px; margin-top:4px; }
+  .wm-toggle { position:relative; width:40px; height:20px; cursor:pointer; }
+  .wm-toggle input { opacity:0; width:0; height:0; }
+  .wm-toggle-slider { position:absolute; inset:0; background:var(--border); transition:0.3s; }
+  .wm-toggle-slider:before { content:''; position:absolute; width:14px; height:14px; left:3px; top:3px; background:var(--text-dim); transition:0.3s; }
+  .wm-toggle input:checked + .wm-toggle-slider { background:rgba(0,229,255,0.3); }
+  .wm-toggle input:checked + .wm-toggle-slider:before { transform:translateX(20px); background:var(--accent); }
+  .wm-btn-row { display:flex; gap:12px; margin-top:20px; align-items:center; }
+  .wm-btn { background:transparent; border:1px solid var(--accent); color:var(--accent); font-family:'Space Mono',monospace; font-size:11px; padding:9px 22px; cursor:pointer; text-transform:uppercase; letter-spacing:0.1em; transition:all 0.2s; }
+  .wm-btn:hover { background:var(--accent); color:var(--bg); }
+  .wm-btn:disabled { opacity:0.4; cursor:not-allowed; }
+  .wm-btn.danger { border-color:var(--accent2); color:var(--accent2); }
+  .wm-btn.danger:hover { background:var(--accent2); color:#fff; }
+  .wm-output { margin-top:20px; background:#050810; border:1px solid var(--border); padding:16px; font-size:11px; line-height:1.8; color:#00ff88; font-family:'Space Mono',monospace; min-height:80px; white-space:pre-wrap; }
+  .wm-key-box { display:flex; align-items:center; gap:8px; margin-top:16px; }
+  .wm-key-display { flex:1; background:#050810; border:1px solid rgba(0,229,255,0.3); padding:8px 12px; font-family:'Space Mono',monospace; font-size:10px; color:var(--accent); letter-spacing:0.05em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .wm-copy-btn { background:transparent; border:1px solid var(--border); color:var(--text-dim); font-size:14px; padding:6px 10px; cursor:pointer; transition:all 0.2s; }
+  .wm-copy-btn:hover { border-color:var(--accent); color:var(--accent); }
+  .wm-features { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:24px; }
+  .wm-feat { background:var(--surface2); border:1px solid var(--border); padding:14px 16px; display:flex; align-items:flex-start; gap:10px; }
+  .wm-feat-icon { font-size:18px; flex-shrink:0; margin-top:2px; }
+  .wm-feat-title { font-family:'Syne',sans-serif; font-weight:700; font-size:12px; color:var(--text-bright); margin-bottom:3px; }
+  .wm-feat-desc { font-size:10px; color:var(--text-dim); line-height:1.5; }
+
+  /* Dropzone */
+  .wm-dropzone { border:2px dashed var(--border); padding:24px; text-align:center; cursor:pointer; transition:all 0.2s; background:var(--surface2); }
+  .wm-dropzone:hover, .wm-dropzone.dragover { border-color:var(--accent); background:rgba(0,229,255,0.04); }
+  .wm-drop-icon { font-size:28px; margin-bottom:6px; }
+  .wm-drop-text { font-family:'Syne',sans-serif; font-weight:700; font-size:13px; color:var(--text-bright); }
+  .wm-drop-sub { font-size:10px; color:var(--text-dim); margin-top:4px; text-transform:uppercase; letter-spacing:0.1em; }
+  .wm-preview-row { display:flex; gap:16px; align-items:center; margin-top:12px; }
+  .wm-preview-img { width:80px; height:80px; object-fit:cover; border:1px solid var(--border); image-rendering:pixelated; }
+  .wm-preview-meta { font-size:11px; color:var(--text-dim); line-height:1.8; }
+  .wm-preview-meta span { color:var(--text-bright); }
+  .wm-compare { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+  .wm-compare-item { display:flex; flex-direction:column; gap:6px; }
+  .wm-compare-label { font-size:10px; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-dim); }
+  .wm-compare-img { width:100%; aspect-ratio:1/1; object-fit:cover; border:1px solid var(--border); image-rendering:pixelated; }
+
+  /* ── API SECTION ── */
+  .api-section { background:var(--surface); border:1px solid var(--border); padding:28px; margin-bottom:32px; opacity:0; animation:fadeUp 0.6s 1.25s forwards; }
+  .api-status-bar { display:flex; align-items:center; gap:16px; background:var(--surface2); border:1px solid var(--border); padding:12px 16px; margin-bottom:24px; }
+  .api-dot { width:8px; height:8px; border-radius:50%; background:var(--accent3); animation:pulse 2s infinite; flex-shrink:0; }
+  .api-url { font-family:'Space Mono',monospace; font-size:11px; color:var(--accent); flex:1; }
+  .api-version { font-size:10px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.1em; }
+  .api-endpoints { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
+  .api-card { background:var(--surface2); border:1px solid var(--border); padding:18px; transition:border-color 0.2s; cursor:pointer; }
+  .api-card:hover, .api-card.active { border-color:var(--accent); }
+  .api-card-head { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .method-badge { padding:3px 8px; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; font-family:'Space Mono',monospace; }
+  .method-get  { background:rgba(127,255,110,0.15); color:var(--accent3); border:1px solid rgba(127,255,110,0.3); }
+  .method-post { background:rgba(0,229,255,0.12); color:var(--accent); border:1px solid rgba(0,229,255,0.25); }
+  .api-route { font-family:'Space Mono',monospace; font-size:12px; color:var(--text-bright); font-weight:700; }
+  .api-desc { font-size:11px; color:var(--text-dim); line-height:1.6; margin-bottom:10px; }
+  .api-params { display:flex; flex-wrap:wrap; gap:6px; }
+  .api-param { font-size:9px; font-family:'Space Mono',monospace; padding:2px 7px; background:var(--surface); border:1px solid var(--border); color:var(--text-dim); }
+  .api-param.required { border-color:rgba(0,229,255,0.3); color:var(--accent); }
+  .api-curl-area { background:#050810; border:1px solid var(--border); padding:20px; margin-top:16px; }
+  .api-curl-title { font-size:10px; text-transform:uppercase; letter-spacing:0.15em; color:var(--text-dim); margin-bottom:12px; display:flex; justify-content:space-between; align-items:center; }
+  .curl-copy { background:transparent; border:1px solid var(--border); color:var(--text-dim); font-size:10px; padding:3px 10px; cursor:pointer; font-family:'Space Mono',monospace; transition:all 0.2s; text-transform:uppercase; letter-spacing:0.05em; }
+  .curl-copy:hover { border-color:var(--accent); color:var(--accent); }
+  .curl-code { font-family:'Space Mono',monospace; font-size:11px; color:#e0e8f0; line-height:1.8; white-space:pre; overflow-x:auto; }
+  .curl-code .kw  { color:var(--accent3); }
+  .curl-code .str { color:#ffd080; }
+  .curl-code .opt { color:var(--aa); }
+  .curl-code .url { color:var(--accent); }
+  .api-response { background:#050810; border:1px solid var(--border); padding:14px 16px; font-size:11px; font-family:'Space Mono',monospace; min-height:60px; color:#00ff88; line-height:1.7; white-space:pre-wrap; margin-top:12px; }
+  .json-key { color:#79c0ff; }
+  .json-str { color:#ffd080; }
+  .json-num { color:var(--accent3); }
 </style>
 </head>
 <body>
 <div class="wrapper">
 
-  <!-- HEADER -->
   <header>
     <div class="header-left">
       <h1>QIM <span>Watermark</span></h1>
@@ -357,45 +342,21 @@
     </div>
   </header>
 
-  <!-- LEGEND -->
   <div class="legend">
     <div class="legend-item"><div class="legend-color ga"></div><span>GA — Global Approach (vecteur constant u=(1,1,1)/√3)</span></div>
     <div class="legend-item"><div class="legend-color aa"></div><span>AA — Adaptive Approach (vecteur uP optimal via modèle Alleysson)</span></div>
   </div>
 
-  <!-- STAT CARDS -->
   <div class="section-label">Métriques de qualité visuelle (sans attaque)</div>
   <div class="stats-row">
-    <div class="stat-card ga-card">
-      <div class="label">PSNR — GA</div>
-      <div class="value">41.2 <span>dB</span></div>
-      <div class="sub">Peak Signal-to-Noise Ratio</div>
-    </div>
-    <div class="stat-card aa-card">
-      <div class="label">PSNR — AA</div>
-      <div class="value">43.7 <span>dB</span></div>
-      <div class="sub">Peak Signal-to-Noise Ratio</div>
-      <div class="winner">Meilleur ✓</div>
-    </div>
-    <div class="stat-card neutral">
-      <div class="label">BER propre (GA / AA)</div>
-      <div class="value">0.0000</div>
-      <div class="sub">Extraction parfaite sans attaque</div>
-    </div>
-    <div class="stat-card green">
-      <div class="label">Bits insérés</div>
-      <div class="value">128</div>
-      <div class="sub">Coefficients DCT milieu de bande</div>
-    </div>
+    <div class="stat-card ga-card"><div class="label">PSNR — GA</div><div class="value">41.2 <span>dB</span></div><div class="sub">Peak Signal-to-Noise Ratio</div></div>
+    <div class="stat-card aa-card"><div class="label">PSNR — AA</div><div class="value">43.7 <span>dB</span></div><div class="sub">Peak Signal-to-Noise Ratio</div><div class="winner">Meilleur ✓</div></div>
+    <div class="stat-card neutral"><div class="label">BER propre (GA / AA)</div><div class="value">0.0000</div><div class="sub">Extraction parfaite sans attaque</div></div>
+    <div class="stat-card green"><div class="label">Bits insérés</div><div class="value">128</div><div class="sub">Coefficients DCT milieu de bande</div></div>
   </div>
 
-  <!-- ══════════════════════════════════════════════════════ -->
-  <!-- IMAGE GENERATION & COMPARISON SECTION                  -->
-  <!-- ══════════════════════════════════════════════════════ -->
   <div class="section-label">Génération & Comparaison visuelle des images</div>
   <div class="img-section">
-
-    <!-- Controls -->
     <div class="img-controls">
       <div class="ctrl-group">
         <label>Image source</label>
@@ -418,131 +379,55 @@
       </div>
       <button class="btn-gen" id="genBtn" onclick="generateAll()">▶ Générer</button>
     </div>
-
-    <!-- Progress -->
-    <div class="gen-progress" id="genProgress">
-      <div class="gen-progress-bar" id="genBar"></div>
-    </div>
-
-    <!-- Main comparison: 4 canvases -->
+    <div class="gen-progress" id="genProgress"><div class="gen-progress-bar" id="genBar"></div></div>
     <div class="canvases-grid">
-      <!-- Original -->
       <div class="canvas-wrap">
-        <div class="canvas-label">
-          Image Originale
-          <span class="tag" style="border-color:var(--accent);color:var(--accent)">HOST</span>
-        </div>
+        <div class="canvas-label">Image Originale <span class="tag" style="border-color:var(--accent);color:var(--accent)">HOST</span></div>
         <canvas class="img-canvas" id="canvasOrig" width="256" height="256"></canvas>
-        <div class="canvas-meta" id="metaOrig">
-          <span class="bright">256 × 256</span> · BGR uint8<br>
-          Cliquez "Générer" pour démarrer
-        </div>
+        <div class="canvas-meta" id="metaOrig"><span class="bright">256 × 256</span> · BGR uint8<br>Cliquez "Générer" pour démarrer</div>
       </div>
-      <!-- GA Watermarked -->
       <div class="canvas-wrap">
-        <div class="canvas-label">
-          Tatoué — GA
-          <span class="tag ga-tag">GA</span>
-        </div>
+        <div class="canvas-label">Tatoué — GA <span class="tag ga-tag">GA</span></div>
         <canvas class="img-canvas" id="canvasGA" width="256" height="256"></canvas>
-        <div class="canvas-meta" id="metaGA">
-          PSNR: <span class="bright" id="psnrGA">—</span><br>
-          DWR: <span class="bright" id="dwrGA">—</span>
-        </div>
+        <div class="canvas-meta" id="metaGA">PSNR: <span class="bright" id="psnrGA">—</span><br>DWR: <span class="bright" id="dwrGA">—</span></div>
       </div>
-      <!-- AA Watermarked -->
       <div class="canvas-wrap">
-        <div class="canvas-label">
-          Tatoué — AA
-          <span class="tag aa-tag">AA</span>
-        </div>
+        <div class="canvas-label">Tatoué — AA <span class="tag aa-tag">AA</span></div>
         <canvas class="img-canvas" id="canvasAA" width="256" height="256"></canvas>
-        <div class="canvas-meta" id="metaAA">
-          PSNR: <span class="bright" id="psnrAA">—</span><br>
-          DWR: <span class="bright" id="dwrAA">—</span>
-        </div>
+        <div class="canvas-meta" id="metaAA">PSNR: <span class="bright" id="psnrAA">—</span><br>DWR: <span class="bright" id="dwrAA">—</span></div>
       </div>
-      <!-- Difference Maps -->
       <div class="canvas-wrap">
-        <div class="canvas-label">
-          Carte de différence ×10
-          <span class="tag diff-tag">DIFF</span>
-        </div>
+        <div class="canvas-label">Carte de différence ×10 <span class="tag diff-tag">DIFF</span></div>
         <canvas class="img-canvas" id="canvasDiff" width="256" height="256"></canvas>
-        <div class="canvas-meta" id="metaDiff">
-          Amplifiée ×10<br>
-          <span style="color:var(--ga)">■</span> GA &nbsp; <span style="color:var(--aa)">■</span> AA
-        </div>
+        <div class="canvas-meta" id="metaDiff">Amplifiée ×10<br><span style="color:var(--ga)">■</span> GA &nbsp; <span style="color:var(--aa)">■</span> AA</div>
       </div>
     </div>
-
-    <!-- Attack Preview Row -->
     <div class="section-label" style="margin-top:28px;">Simulation d'attaques sur l'image tatouée (AA)</div>
     <div class="attack-preview">
-      <div class="atk-wrap">
-        <div class="atk-label">Original (ref)</div>
-        <canvas class="atk-canvas" id="atkOrig" width="128" height="128"></canvas>
-        <div class="atk-ber" style="color:var(--accent3)">BER: 0.000</div>
-      </div>
-      <div class="atk-wrap">
-        <div class="atk-label">JPEG q=90</div>
-        <canvas class="atk-canvas" id="atkJpeg90" width="128" height="128"></canvas>
-        <div class="atk-ber" id="berJpeg90" style="color:var(--accent3)">—</div>
-      </div>
-      <div class="atk-wrap">
-        <div class="atk-label">JPEG q=70</div>
-        <canvas class="atk-canvas" id="atkJpeg70" width="128" height="128"></canvas>
-        <div class="atk-ber" id="berJpeg70" style="color:#f0c040">—</div>
-      </div>
-      <div class="atk-wrap">
-        <div class="atk-label">Gauss σ=5</div>
-        <canvas class="atk-canvas" id="atkGauss5" width="128" height="128"></canvas>
-        <div class="atk-ber" id="berGauss5" style="color:var(--accent3)">—</div>
-      </div>
-      <div class="atk-wrap">
-        <div class="atk-label">Gauss σ=15</div>
-        <canvas class="atk-canvas" id="atkGauss15" width="128" height="128"></canvas>
-        <div class="atk-ber" id="berGauss15" style="color:var(--aa)">—</div>
-      </div>
-    </div>
-
-  </div><!-- /img-section -->
-
-  <!-- CHARTS -->
-  <div class="section-label">Robustesse — Bit Error Rate (BER)</div>
-  <div class="charts-grid">
-    <div class="chart-card">
-      <div class="chart-title">Attaque JPEG</div>
-      <div class="chart-desc">BER en fonction du facteur de qualité JPEG q<br>q=100 → sans perte · q=70 → compression forte</div>
-      <div class="chart-wrap"><canvas id="jpegChart"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <div class="chart-title">Bruit Gaussien</div>
-      <div class="chart-desc">BER en fonction de l'écart-type σ du bruit additif<br>σ=0 → propre · σ=20 → bruit fort</div>
-      <div class="chart-wrap"><canvas id="gaussChart"></canvas></div>
+      <div class="atk-wrap"><div class="atk-label">Original (ref)</div><canvas class="atk-canvas" id="atkOrig" width="128" height="128"></canvas><div class="atk-ber" style="color:var(--accent3)">BER: 0.000</div></div>
+      <div class="atk-wrap"><div class="atk-label">JPEG q=90</div><canvas class="atk-canvas" id="atkJpeg90" width="128" height="128"></canvas><div class="atk-ber" id="berJpeg90" style="color:var(--accent3)">—</div></div>
+      <div class="atk-wrap"><div class="atk-label">JPEG q=70</div><canvas class="atk-canvas" id="atkJpeg70" width="128" height="128"></canvas><div class="atk-ber" id="berJpeg70" style="color:#f0c040">—</div></div>
+      <div class="atk-wrap"><div class="atk-label">Gauss σ=5</div><canvas class="atk-canvas" id="atkGauss5" width="128" height="128"></canvas><div class="atk-ber" id="berGauss5" style="color:var(--accent3)">—</div></div>
+      <div class="atk-wrap"><div class="atk-label">Gauss σ=15</div><canvas class="atk-canvas" id="atkGauss15" width="128" height="128"></canvas><div class="atk-ber" id="berGauss15" style="color:var(--aa)">—</div></div>
     </div>
   </div>
 
-  <!-- DWR -->
+  <div class="section-label">Robustesse — Bit Error Rate (BER)</div>
+  <div class="charts-grid">
+    <div class="chart-card"><div class="chart-title">Attaque JPEG</div><div class="chart-desc">BER en fonction du facteur de qualité JPEG q<br>q=100 → sans perte · q=70 → compression forte</div><div class="chart-wrap"><canvas id="jpegChart"></canvas></div></div>
+    <div class="chart-card"><div class="chart-title">Bruit Gaussien</div><div class="chart-desc">BER en fonction de l'écart-type σ du bruit additif<br>σ=0 → propre · σ=20 → bruit fort</div><div class="chart-wrap"><canvas id="gaussChart"></canvas></div></div>
+  </div>
+
   <div class="chart-full">
     <div class="chart-title">DWR — Document-to-Watermark Ratio</div>
     <div class="chart-desc">Niveau de distorsion introduite par le tatouage · Plus la valeur est haute, moins la marque est visible · AA ≥ GA grâce au modèle psychovisuel</div>
     <div class="chart-wrap"><canvas id="dwrChart"></canvas></div>
   </div>
 
-  <!-- TABLE -->
   <div class="section-label">Tableau de synthèse comparatif</div>
   <div class="table-section">
     <table>
-      <thead>
-        <tr>
-          <th>Métrique</th>
-          <th class="ga-head">GA (constante)</th>
-          <th class="aa-head">AA (adaptative)</th>
-          <th>Meilleur</th>
-          <th>Description</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Métrique</th><th class="ga-head">GA (constante)</th><th class="aa-head">AA (adaptative)</th><th>Meilleur</th><th>Description</th></tr></thead>
       <tbody>
         <tr><td>PSNR (dB)</td><td class="val-ga">41.24</td><td class="val-aa">43.71</td><td><span class="win-badge">AA ✓</span></td><td>Qualité visuelle de l'image tatouée</td></tr>
         <tr><td>DWR (dB)</td><td class="val-ga">38.50</td><td class="val-aa">40.10</td><td><span class="win-badge">AA ✓</span></td><td>Rapport image / bruit de tatouage</td></tr>
@@ -555,7 +440,6 @@
     </table>
   </div>
 
-  <!-- PIPELINE -->
   <div class="section-label">Pipeline du système de tatouage</div>
   <div class="pipeline">
     <div class="pipe-step"><div class="pipe-num">01</div><div class="pipe-name">Image hôte</div><div class="pipe-desc">Image couleur BGR découpée en blocs 8×8 pixels</div></div>
@@ -565,7 +449,6 @@
     <div class="pipe-step"><div class="pipe-num">05</div><div class="pipe-name">IDCT</div><div class="pipe-desc">Reconstruction de l'image tatouée — retour domaine spatial</div></div>
   </div>
 
-  <!-- PARAMS -->
   <div class="section-label">Paramètres de configuration</div>
   <div class="params-row">
     <div class="param-card"><div class="param-icon">Δ</div><div><div class="param-name">Pas de quantification</div><div class="param-val">30.0</div><div class="param-note">↑ robustesse · ↓ invisibilité</div></div></div>
@@ -576,587 +459,425 @@
     <div class="param-card"><div class="param-icon">👁️</div><div><div class="param-name">Modèle psychovisuel</div><div class="param-val">Alleysson</div><div class="param-note">Naka-Rushton · LMS · SVH</div></div></div>
   </div>
 
+  <!-- ═══════════ WATERMARK MANAGER ═══════════ -->
+  <div class="section-label">Gestionnaire de Tatouage — Connecté à l'API Flask</div>
+  <div class="wm-manager">
+    <div class="wm-features">
+      <div class="wm-feat"><div class="wm-feat-icon">🖼️</div><div><div class="wm-feat-title">Upload & Drag-drop</div><div class="wm-feat-desc">Glissez ou cliquez pour choisir votre image. Prévisualisation instantanée avec dimensions et taille.</div></div></div>
+      <div class="wm-feat"><div class="wm-feat-icon">🔑</div><div><div class="wm-feat-title">Clé HMAC-SHA256</div><div class="wm-feat-desc">Clé propriétaire unique générée par l'API. Session ID + Owner Key à conserver pour l'extraction.</div></div></div>
+      <div class="wm-feat"><div class="wm-feat-icon">⬇️</div><div><div class="wm-feat-title">Téléchargement direct</div><div class="wm-feat-desc">Image tatouée PNG téléchargeable immédiatement. Comparaison avant/après dans le dashboard.</div></div></div>
+      <div class="wm-feat"><div class="wm-feat-icon">📤</div><div><div class="wm-feat-title">Extraction BER réelle</div><div class="wm-feat-desc">Le BER est calculé par l'API Python/OpenCV sur les vrais coefficients DCT, pas simulé.</div></div></div>
+      <div class="wm-feat"><div class="wm-feat-icon">↩️</div><div><div class="wm-feat-title">Rétablissement garanti</div><div class="wm-feat-desc">Image originale reconstruite depuis la session JSON. Téléchargement PNG en un clic.</div></div></div>
+      <div class="wm-feat"><div class="wm-feat-icon">🔒</div><div><div class="wm-feat-title">Sécurité API</div><div class="wm-feat-desc">Extraction et rétablissement refusés (403) sans la bonne Owner Key. hmac.compare_digest.</div></div></div>
+    </div>
+
+    <div class="wm-tabs">
+      <button class="wm-tab active" onclick="wmTab('insert',this)">📥 Insérer watermark</button>
+      <button class="wm-tab" onclick="wmTab('extract',this)">🔑 Extraire / Rétablir</button>
+    </div>
+
+    <!-- INSERT PANEL -->
+    <div class="wm-panel active" id="wm-insert">
+      <div class="wm-dropzone" id="wmDropzone">
+        <input type="file" id="wmFileInput" accept="image/*" style="display:none" onchange="onFileSelected(this)">
+        <div class="wm-drop-icon">🖼️</div>
+        <div class="wm-drop-text" id="wmDropText">Cliquez ou glissez une image ici</div>
+        <div class="wm-drop-sub">PNG · JPG · BMP · TIFF</div>
+      </div>
+      <div class="wm-preview-row" id="wmPreviewRow" style="display:none">
+        <img id="wmPreviewImg" class="wm-preview-img" src="" alt="preview">
+        <div class="wm-preview-meta" id="wmPreviewMeta"></div>
+      </div>
+
+      <div class="wm-form" style="margin-top:16px;">
+        <div class="wm-field">
+          <label>Passphrase (≥ 6 caractères)</label>
+          <input type="password" id="wmPassphrase" placeholder="••••••••">
+        </div>
+        <div class="wm-field">
+          <label>Bits du watermark</label>
+          <select id="wmBits">
+            <option value="32">32 bits</option>
+            <option value="64">64 bits</option>
+            <option value="128" selected>128 bits</option>
+            <option value="256">256 bits</option>
+          </select>
+        </div>
+        <div class="wm-field">
+          <label>Pas de quantification Δ</label>
+          <select id="wmStep">
+            <option value="10">Δ = 10 (invisible, fragile)</option>
+            <option value="20">Δ = 20</option>
+            <option value="30" selected>Δ = 30 (défaut — recommandé)</option>
+            <option value="50">Δ = 50</option>
+            <option value="80">Δ = 80 ⚠️ robuste mais visible</option>
+          </select>
+        </div>
+        <div class="wm-field">
+          <label>Approche</label>
+          <div class="wm-toggle-row">
+            <label class="wm-toggle">
+              <input type="checkbox" id="wmAdaptive" checked>
+              <span class="wm-toggle-slider"></span>
+            </label>
+            <span id="wmApproachLabel" style="font-size:11px;color:var(--aa);">AA — Adaptative (Alleysson)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wm-btn-row">
+        <button class="wm-btn" id="wmInsertBtn" onclick="doInsert()">🔏 Insérer le watermark</button>
+        <span id="wmInsertSpinner" style="display:none;font-size:11px;color:var(--text-dim);"><span class="spinner"></span>Encodage en cours…</span>
+      </div>
+      <div class="wm-output" id="wmInsertOutput">→ Sélectionnez une image, configurez les paramètres puis cliquez "Insérer le watermark"</div>
+
+      <div id="wmResultArea" style="display:none">
+        <div class="wm-key-box">
+          <div style="font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.1em;flex-shrink:0;min-width:80px;">Session ID :</div>
+          <div class="wm-key-display" id="wmSessionIdDisplay"></div>
+          <button class="wm-copy-btn" onclick="copyField('wmSessionIdDisplay')" title="Copier">📋</button>
+        </div>
+        <div class="wm-key-box" style="margin-top:8px;">
+          <div style="font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.1em;flex-shrink:0;min-width:80px;">Owner Key :</div>
+          <div class="wm-key-display" id="wmKeyDisplay"></div>
+          <button class="wm-copy-btn" onclick="copyField('wmKeyDisplay')" title="Copier">📋</button>
+        </div>
+        <div class="wm-btn-row" style="margin-top:14px;">
+          <button class="wm-btn" onclick="downloadWatermarked()" style="border-color:var(--accent3);color:var(--accent3);">⬇️ Télécharger l'image tatouée</button>
+        </div>
+        <div class="wm-compare" id="wmCompare" style="display:none">
+          <div class="wm-compare-item"><div class="wm-compare-label">Originale</div><img id="wmCompareOrig" class="wm-compare-img" src="" alt="original"></div>
+          <div class="wm-compare-item"><div class="wm-compare-label" style="color:var(--aa);">Tatouée (résultat réel)</div><img id="wmCompareWm" class="wm-compare-img" src="" alt="watermarked"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXTRACT PANEL -->
+    <div class="wm-panel" id="wm-extract">
+      <div class="wm-dropzone" id="wmDropzoneEx" style="margin-bottom:16px;">
+        <input type="file" id="wmFileInputEx" accept="image/*" style="display:none" onchange="onFileSelectedEx(this)">
+        <div class="wm-drop-icon">🔍</div>
+        <div class="wm-drop-text" id="wmDropTextEx">Image tatouée à analyser</div>
+        <div class="wm-drop-sub">PNG · JPG · BMP</div>
+      </div>
+      <div class="wm-form">
+        <div class="wm-field">
+          <label>Session ID (reçu lors de l'encodage)</label>
+          <input type="text" id="wmSessionId" placeholder="a3f812c0d9e14b2f" style="letter-spacing:normal;">
+        </div>
+        <div class="wm-field">
+          <label>Owner Key (reçu lors de l'encodage)</label>
+          <input type="password" id="wmKey" placeholder="7c3a9f…d841" style="letter-spacing:normal;">
+          <div style="margin-top:4px;">
+            <label style="font-size:10px;color:var(--text-dim);cursor:pointer;">
+              <input type="checkbox" onchange="document.getElementById('wmKey').type=this.checked?'text':'password'" style="vertical-align:middle;">
+              Afficher la clé
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="wm-btn-row">
+        <button class="wm-btn" onclick="doExtract()">📤 Extraire le watermark</button>
+        <button class="wm-btn danger" onclick="doRevert()">↩️ Rétablir l'image originale</button>
+        <span id="wmExtractSpinner" style="display:none;font-size:11px;color:var(--text-dim);"><span class="spinner"></span>Traitement…</span>
+      </div>
+      <div class="wm-output" id="wmExtractOutput">→ Uploadez l'image tatouée, entrez le Session ID et l'Owner Key</div>
+      <div id="wmRevertDownload" style="display:none;margin-top:12px;">
+        <button class="wm-btn" onclick="downloadReverted()" style="border-color:var(--accent3);color:var(--accent3);">⬇️ Télécharger l'image originale rétablie</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ API REST ═══════════ -->
+  <div class="section-label">API REST — Flask · http://localhost:5000</div>
+  <div class="api-section">
+    <div class="api-status-bar">
+      <div class="api-dot"></div>
+      <div class="api-url">http://localhost:5000</div>
+      <div class="api-version">v1.0.0 · Flask · MAX 50 MB</div>
+    </div>
+    <div class="api-endpoints">
+      <div class="api-card active" onclick="showCurl('encode',this)"><div class="api-card-head"><span class="method-badge method-post">POST</span><span class="api-route">/encode</span></div><div class="api-desc">Insère un watermark QIM. Génère une clé HMAC-SHA256 et sauvegarde la session.</div><div class="api-params"><span class="api-param required">image*</span><span class="api-param required">passphrase*</span><span class="api-param">n_bits</span><span class="api-param">step</span><span class="api-param">adaptive</span></div></div>
+      <div class="api-card" onclick="showCurl('decode',this)"><div class="api-card-head"><span class="method-badge method-post">POST</span><span class="api-route">/decode</span></div><div class="api-desc">Extrait le watermark et calcule le BER. Nécessite session_id et owner_key.</div><div class="api-params"><span class="api-param required">image*</span><span class="api-param required">session_id*</span><span class="api-param required">owner_key*</span></div></div>
+      <div class="api-card" onclick="showCurl('revert',this)"><div class="api-card-head"><span class="method-badge method-post">POST</span><span class="api-route">/revert</span></div><div class="api-desc">Rétablit l'image originale depuis la session sur présentation de la clé valide.</div><div class="api-params"><span class="api-param required">session_id*</span><span class="api-param required">owner_key*</span></div></div>
+      <div class="api-card" onclick="showCurl('attacks',this)"><div class="api-card-head"><span class="method-badge method-post">POST</span><span class="api-route">/attack/jpeg &amp; /gaussian</span></div><div class="api-desc">Simule des attaques sur une image tatouée. JPEG: quality. Gaussien: sigma.</div><div class="api-params"><span class="api-param required">image*</span><span class="api-param">quality</span><span class="api-param">sigma</span></div></div>
+      <div class="api-card" onclick="showCurl('metrics',this)"><div class="api-card-head"><span class="method-badge method-post">POST</span><span class="api-route">/metrics</span></div><div class="api-desc">Calcule PSNR, DWR, et optionnellement BER si session + clé fournis.</div><div class="api-params"><span class="api-param required">original*</span><span class="api-param required">watermarked*</span><span class="api-param">session_id</span><span class="api-param">owner_key</span></div></div>
+      <div class="api-card" onclick="showCurl('health',this)"><div class="api-card-head"><span class="method-badge method-get">GET</span><span class="api-route">/health</span></div><div class="api-desc">Vérifie que l'API est opérationnelle. Retourne statut, version et heure.</div><div class="api-params"><span class="api-param" style="color:var(--accent3);border-color:rgba(127,255,110,0.3)">aucun paramètre</span></div></div>
+    </div>
+    <div class="api-curl-area">
+      <div class="api-curl-title"><span>Exemple cURL — <span id="curlEndpointLabel">/encode</span></span><button class="curl-copy" onclick="copyCurl()">📋 Copier</button></div>
+      <div class="curl-code" id="curlCode"></div>
+    </div>
+    <div style="margin-top:20px;">
+      <div class="section-label">Test live</div>
+      <div class="wm-btn-row">
+        <button class="wm-btn" onclick="testHealth()">▶ GET /health (live)</button>
+        <button class="wm-btn" onclick="testEncodeDemo()" style="border-color:var(--accent2);color:var(--accent2)">▶ Simuler /encode response</button>
+      </div>
+      <div class="api-response" id="apiResponse">→ Cliquez un bouton pour tester</div>
+    </div>
+  </div>
+
   <footer>
     <span>QIM Watermarking · Mini-Projet L2-IRS · Lefevre, Carré, Gaborit — XLIM</span>
     <span>Chen &amp; Wornell (2001) · Moulin &amp; Koetter (2005) · Alleysson &amp; Méary (2012)</span>
   </footer>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- JAVASCRIPT — QIM ENGINE + IMAGE GENERATION             -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <script>
-/* ── Sliders ── */
-document.getElementById('stepSlider').addEventListener('input', function(){
-  document.getElementById('stepVal').textContent = this.value;
-});
-document.getElementById('bitsSlider').addEventListener('input', function(){
-  document.getElementById('bitsVal').textContent = this.value;
-});
+/* Sliders */
+document.getElementById('stepSlider').addEventListener('input',function(){ document.getElementById('stepVal').textContent=this.value; });
+document.getElementById('bitsSlider').addEventListener('input',function(){ document.getElementById('bitsVal').textContent=this.value; });
+
+/* ══ IMAGE GENERATORS ══ */
+const SIZE=256;
+function makeGradient(d){for(let i=0;i<SIZE;i++)for(let j=0;j<SIZE;j++){const x=(i*SIZE+j)*4;d[x]=Math.round(255*i/SIZE);d[x+1]=Math.round(255*j/SIZE);d[x+2]=Math.round(255*(1-(i+j)/(2*SIZE)));d[x+3]=255;}}
+function makeLena(d){for(let i=0;i<SIZE;i++)for(let j=0;j<SIZE;j++){const x=(i*SIZE+j)*4,ni=i/SIZE,nj=j/SIZE,sk=Math.max(0,1-Math.sqrt((ni-.45)**2+(nj-.5)**2)*3);d[x]=Math.round(Math.min(255,200*sk+80*(1-sk)+30*Math.sin(ni*12)));d[x+1]=Math.round(Math.min(255,150*sk+60*(1-sk)+20*Math.sin(nj*10)));d[x+2]=Math.round(Math.min(255,120*sk+40*(1-sk)+15*Math.cos((ni+nj)*8)));d[x+3]=255;}}
+function makeChecker(d){for(let i=0;i<SIZE;i++)for(let j=0;j<SIZE;j++){const x=(i*SIZE+j)*4,c=(Math.floor(i/32)+Math.floor(j/32))%2;d[x]=c?220:40+Math.round(40*i/SIZE);d[x+1]=c?200:40+Math.round(40*j/SIZE);d[x+2]=c?180:80;d[x+3]=255;}}
+function makeNature(d){for(let i=0;i<SIZE;i++)for(let j=0;j<SIZE;j++){const x=(i*SIZE+j)*4,ni=i/SIZE,nj=j/SIZE;if(ni<.45){d[x]=Math.round(100+60*ni+15*Math.sin(nj*20));d[x+1]=Math.round(160+40*ni);d[x+2]=Math.round(230-40*ni+10*Math.cos(nj*15));}else{const h=.45+.12*Math.sin(nj*Math.PI*3);if(ni<h){d[x]=Math.round(40);d[x+1]=Math.round(100+60*(ni-.45)+15*Math.sin(nj*25));d[x+2]=30;}else{d[x]=Math.round(120+40*ni);d[x+1]=Math.round(80+20*ni);d[x+2]=40;}}d[x+3]=255;}}
+function buildSourceImage(t){const id=new ImageData(SIZE,SIZE);if(t==='gradient')makeGradient(id.data);else if(t==='lena')makeLena(id.data);else if(t==='checker')makeChecker(id.data);else makeNature(id.data);return id;}
+
+/* ══ QIM ENGINE ══ */
+function seededRng(s){return function(){s=(s*1664525+1013904223)>>>0;return s/0xFFFFFFFF;};}
+function generateWatermark(n,s){const r=seededRng(s+100),b=new Uint8Array(n);for(let i=0;i<n;i++)b[i]=r()>.5?1:0;return b;}
+function encodeWatermark(img,wm,step,adaptive){const res=new ImageData(new Uint8ClampedArray(img.data),SIZE,SIZE),B=8;let bi=0;for(let r=0;r<SIZE/B&&bi<wm.length;r++)for(let c=0;c<SIZE/B&&bi<wm.length;c++){const bit=wm[bi++],pi=Math.min(Math.round((r+.5)*B),SIZE-1),pj=Math.min(Math.round((c+.5)*B),SIZE-1),ci=(pi*SIZE+pj)*4,R=img.data[ci],G=img.data[ci+1],Bv=img.data[ci+2];let uR,uG,uB;if(adaptive){const l=.299*R+.587*G+.114*Bv+1;uR=.299*R/l;uG=.587*G/l;uB=.114*Bv/l;const n=Math.sqrt(uR*uR+uG*uG+uB*uB)||1;uR/=n;uG/=n;uB/=n;}else{uR=uG=uB=1/Math.sqrt(3);}let S=0,cnt=0;for(let dy=0;dy<B;dy++)for(let dx=0;dx<B;dx++){const y=r*B+dy,x=c*B+dx;if(y>=SIZE||x>=SIZE)continue;const i=(y*SIZE+x)*4;S+=res.data[i]*uR+res.data[i+1]*uG+res.data[i+2]*uB;cnt++;}S/=(cnt||1);const Sq=step*(Math.round(S/step-bit/2)+bit/2),delta=Sq-S;for(let dy=0;dy<B;dy++)for(let dx=0;dx<B;dx++){const y=r*B+dy,x=c*B+dx;if(y>=SIZE||x>=SIZE)continue;const i=(y*SIZE+x)*4;res.data[i]=Math.max(0,Math.min(255,res.data[i]+Math.round(delta*uR)));res.data[i+1]=Math.max(0,Math.min(255,res.data[i+1]+Math.round(delta*uG)));res.data[i+2]=Math.max(0,Math.min(255,res.data[i+2]+Math.round(delta*uB)));}}return res;}
+function decodeWatermark(img,n,step,adaptive){const ex=new Uint8Array(n),B=8;let bi=0;for(let r=0;r<SIZE/B&&bi<n;r++)for(let c=0;c<SIZE/B&&bi<n;c++){const pi=Math.min(Math.round((r+.5)*B),SIZE-1),pj=Math.min(Math.round((c+.5)*B),SIZE-1),ci=(pi*SIZE+pj)*4,R=img.data[ci],G=img.data[ci+1],Bv=img.data[ci+2];let uR,uG,uB;if(adaptive){const l=.299*R+.587*G+.114*Bv+1;uR=.299*R/l;uG=.587*G/l;uB=.114*Bv/l;const nm=Math.sqrt(uR*uR+uG*uG+uB*uB)||1;uR/=nm;uG/=nm;uB/=nm;}else{uR=uG=uB=1/Math.sqrt(3);}let S=0,cnt=0;for(let dy=0;dy<B;dy++)for(let dx=0;dx<B;dx++){const y=r*B+dy,x=c*B+dx;if(y>=SIZE||x>=SIZE)continue;const i=(y*SIZE+x)*4;S+=img.data[i]*uR+img.data[i+1]*uG+img.data[i+2]*uB;cnt++;}S/=(cnt||1);const q0=step*Math.round(S/step),q1=step*(Math.round(S/step-.5)+.5);ex[bi++]=Math.abs(S-q0)<Math.abs(S-q1)?0:1;}return ex;}
+function computeBER(a,b){let e=0;const n=Math.min(a.length,b.length);for(let i=0;i<n;i++)if(a[i]!==b[i])e++;return e/n;}
+function computePSNR(a,b){let m=0;for(let i=0;i<a.data.length;i+=4)for(let c=0;c<3;c++){const d=a.data[i+c]-b.data[i+c];m+=d*d;}m/=(SIZE*SIZE*3);return m<1e-10?100:10*Math.log10(255*255/m);}
+function computeDWR(a,b){let s=0,n=0;for(let i=0;i<a.data.length;i+=4)for(let c=0;c<3;c++){s+=a.data[i+c];n++;}const m=s/n;let va=0,vd=0;for(let i=0;i<a.data.length;i+=4)for(let c=0;c<3;c++){va+=(a.data[i+c]-m)**2;vd+=(a.data[i+c]-b.data[i+c])**2;}return vd<1?999:10*Math.log10(va/vd);}
+
+/* ══ ATTACKS ══ */
+function attackGaussian(img,sigma){const res=new ImageData(new Uint8ClampedArray(img.data),SIZE,SIZE);for(let i=0;i<res.data.length;i+=4)for(let c=0;c<3;c++){const u1=Math.random()||1e-10,u2=Math.random(),n=sigma*Math.sqrt(-2*Math.log(u1))*Math.cos(2*Math.PI*u2);res.data[i+c]=Math.max(0,Math.min(255,Math.round(res.data[i+c]+n)));}return res;}
+function attackJPEG(src,q){const tmp=document.createElement('canvas');tmp.width=tmp.height=SIZE;const ctx=tmp.getContext('2d');ctx.putImageData(src,0,0);const out=ctx.getImageData(0,0,SIZE,SIZE),B=q<80?4:2;for(let bi=0;bi<SIZE;bi+=B)for(let bj=0;bj<SIZE;bj+=B){let sR=0,sG=0,sB=0,cnt=0;for(let dy=0;dy<B&&bi+dy<SIZE;dy++)for(let dx=0;dx<B&&bj+dx<SIZE;dx++){const i=((bi+dy)*SIZE+(bj+dx))*4;sR+=out.data[i];sG+=out.data[i+1];sB+=out.data[i+2];cnt++;}const aR=sR/cnt,aG=sG/cnt,aB=sB/cnt,ns=(100-q)*0.3;for(let dy=0;dy<B&&bi+dy<SIZE;dy++)for(let dx=0;dx<B&&bj+dx<SIZE;dx++){const i=((bi+dy)*SIZE+(bj+dx))*4;out.data[i]=Math.max(0,Math.min(255,Math.round(aR+(out.data[i]-aR)*0.6+(Math.random()-.5)*ns)));out.data[i+1]=Math.max(0,Math.min(255,Math.round(aG+(out.data[i+1]-aG)*0.6+(Math.random()-.5)*ns)));out.data[i+2]=Math.max(0,Math.min(255,Math.round(aB+(out.data[i+2]-aB)*0.6+(Math.random()-.5)*ns)));}}return out;}
+
+/* ══ CANVAS HELPERS ══ */
+function drawToCanvas(id,img){const c=document.getElementById(id),ctx=c.getContext('2d');c.width=SIZE;c.height=SIZE;ctx.putImageData(img,0,0);}
+function drawToSmallCanvas(id,img){const c=document.getElementById(id);c.width=128;c.height=128;const ctx=c.getContext('2d'),tmp=document.createElement('canvas');tmp.width=SIZE;tmp.height=SIZE;tmp.getContext('2d').putImageData(img,0,0);ctx.drawImage(tmp,0,0,128,128);}
+function makeDiff(a,b,amp){const res=new ImageData(SIZE,SIZE);for(let i=0;i<a.data.length;i+=4){for(let c=0;c<3;c++)res.data[i+c]=Math.min(255,Math.abs(a.data[i+c]-b.data[i+c])*amp);res.data[i+3]=255;}return res;}
+function makeSideBySideDiff(orig,ga,aa){const res=new ImageData(SIZE,SIZE),gd=makeDiff(orig,ga,10),ad=makeDiff(orig,aa,10);for(let i=0;i<SIZE;i++)for(let j=0;j<SIZE;j++){const x=(i*SIZE+j)*4,s=j<SIZE/2?gd:ad;res.data[x]=s.data[x];res.data[x+1]=s.data[x+1];res.data[x+2]=s.data[x+2];res.data[x+3]=255;}for(let i=0;i<SIZE;i++){const x=(i*SIZE+SIZE/2)*4;res.data[x]=0;res.data[x+1]=229;res.data[x+2]=255;res.data[x+3]=255;}return res;}
+
+/* ══ GENERATE ALL ══ */
+async function generateAll(){const btn=document.getElementById('genBtn'),prog=document.getElementById('genProgress'),bar=document.getElementById('genBar');btn.disabled=true;btn.innerHTML='<span class="spinner"></span>Génération...';prog.classList.add('active');await new Promise(r=>setTimeout(r,20));const step=parseFloat(document.getElementById('stepSlider').value),nBits=parseInt(document.getElementById('bitsSlider').value),imgType=document.getElementById('imgType').value,SEED=42;bar.style.width='10%';const src=buildSourceImage(imgType);drawToCanvas('canvasOrig',src);document.getElementById('metaOrig').innerHTML=`<span class="bright">256 × 256</span> · 3 canaux RGB<br>Type: <span class="bright">${imgType}</span>`;await new Promise(r=>setTimeout(r,10));const wm=generateWatermark(nBits,SEED);bar.style.width='25%';await new Promise(r=>setTimeout(r,10));const gaImg=encodeWatermark(src,wm,step,false);bar.style.width='45%';await new Promise(r=>setTimeout(r,10));const aaImg=encodeWatermark(src,wm,step,true);bar.style.width='60%';drawToCanvas('canvasGA',gaImg);drawToCanvas('canvasAA',aaImg);const pGA=computePSNR(src,gaImg),pAA=computePSNR(src,aaImg),dGA=computeDWR(src,gaImg),dAA=computeDWR(src,aaImg);document.getElementById('psnrGA').textContent=pGA.toFixed(2)+' dB';document.getElementById('dwrGA').textContent=dGA.toFixed(2)+' dB';document.getElementById('psnrAA').textContent=pAA.toFixed(2)+' dB';document.getElementById('dwrAA').textContent=dAA.toFixed(2)+' dB';drawToCanvas('canvasDiff',makeSideBySideDiff(src,gaImg,aaImg));document.getElementById('metaDiff').innerHTML=`Amplifiée ×10 | <span style="color:var(--ga)">■</span> GA (gauche) <span style="color:var(--aa)">■</span> AA (droite)`;bar.style.width='75%';await new Promise(r=>setTimeout(r,10));drawToSmallCanvas('atkOrig',aaImg);const a90=attackJPEG(aaImg,90);drawToSmallCanvas('atkJpeg90',a90);const b90=computeBER(wm,decodeWatermark(a90,nBits,step,true));document.getElementById('berJpeg90').textContent=`BER: ${b90.toFixed(3)}`;document.getElementById('berJpeg90').style.color=b90<0.05?'var(--accent3)':'#f0c040';bar.style.width='82%';await new Promise(r=>setTimeout(r,10));const a70=attackJPEG(aaImg,70);drawToSmallCanvas('atkJpeg70',a70);const b70=computeBER(wm,decodeWatermark(a70,nBits,step,true));document.getElementById('berJpeg70').textContent=`BER: ${b70.toFixed(3)}`;document.getElementById('berJpeg70').style.color=b70<0.15?'#f0c040':'var(--aa)';const ag5=attackGaussian(aaImg,5);drawToSmallCanvas('atkGauss5',ag5);const bg5=computeBER(wm,decodeWatermark(ag5,nBits,step,true));document.getElementById('berGauss5').textContent=`BER: ${bg5.toFixed(3)}`;document.getElementById('berGauss5').style.color=bg5<0.05?'var(--accent3)':'#f0c040';bar.style.width='92%';await new Promise(r=>setTimeout(r,10));const ag15=attackGaussian(aaImg,15);drawToSmallCanvas('atkGauss15',ag15);const bg15=computeBER(wm,decodeWatermark(ag15,nBits,step,true));document.getElementById('berGauss15').textContent=`BER: ${bg15.toFixed(3)}`;document.getElementById('berGauss15').style.color=bg15<0.2?'#f0c040':'var(--aa)';bar.style.width='100%';await new Promise(r=>setTimeout(r,300));prog.classList.remove('active');bar.style.width='0%';btn.disabled=false;btn.innerHTML='▶ Régénérer';}
+window.addEventListener('load',()=>setTimeout(generateAll,600));
+
+/* ══ CHARTS ══ */
+const gridColor='rgba(30,45,61,0.8)',textColor='#4a6070',GA='#4d9fff',AA='#ff6b6b',RAND='rgba(100,100,100,0.4)';
+const baseOpts={responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{backgroundColor:'#0d1318',borderColor:'#1e2d3d',borderWidth:1,titleColor:'#eaf4ff',bodyColor:'#c8d8e8',padding:12,titleFont:{family:'Syne',weight:'700'},bodyFont:{family:'Space Mono',size:11}}},scales:{x:{grid:{color:gridColor},ticks:{color:textColor,font:{family:'Space Mono',size:10}},border:{color:'#1e2d3d'}},y:{min:0,max:0.55,grid:{color:gridColor},ticks:{color:textColor,font:{family:'Space Mono',size:10},callback:v=>v.toFixed(2)},border:{color:'#1e2d3d'}}}};
+new Chart(document.getElementById('jpegChart'),{type:'line',data:{labels:[70,75,80,85,90,95,100].map(q=>`q=${q}`),datasets:[{label:'GA',data:[0.1953,0.1484,0.0703,0.0391,0.0156,0.0078,0.0],borderColor:GA,backgroundColor:GA+'18',borderWidth:2,pointRadius:4,pointBackgroundColor:GA,fill:true,tension:0.3},{label:'AA',data:[0.1406,0.1016,0.0469,0.0234,0.0078,0.0,0.0],borderColor:AA,backgroundColor:AA+'18',borderWidth:2,pointRadius:4,pointBackgroundColor:AA,fill:true,tension:0.3},{label:'Aléatoire',data:[70,75,80,85,90,95,100].map(()=>0.5),borderColor:RAND,borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}]},options:{...baseOpts}});
+new Chart(document.getElementById('gaussChart'),{type:'line',data:{labels:[0,2,4,6,8,10,12,14,16,18,20].map(s=>`σ=${s}`),datasets:[{label:'GA',data:[0.0,0.0078,0.0234,0.0625,0.1094,0.2266,0.2969,0.3438,0.3750,0.3906,0.4063],borderColor:GA,backgroundColor:GA+'18',borderWidth:2,pointRadius:3,pointBackgroundColor:GA,fill:true,tension:0.3},{label:'AA',data:[0.0,0.0,0.0156,0.0391,0.0859,0.1875,0.2578,0.3047,0.3359,0.3594,0.3672],borderColor:AA,backgroundColor:AA+'18',borderWidth:2,pointRadius:3,pointBackgroundColor:AA,fill:true,tension:0.3},{label:'Aléatoire',data:[0,2,4,6,8,10,12,14,16,18,20].map(()=>0.5),borderColor:RAND,borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}]},options:{...baseOpts}});
+new Chart(document.getElementById('dwrChart'),{type:'bar',data:{labels:['PSNR — GA','PSNR — AA','DWR — GA','DWR — AA'],datasets:[{data:[41.24,43.71,38.50,40.10],backgroundColor:[GA+'aa',AA+'aa',GA+'aa',AA+'aa'],borderColor:[GA,AA,GA,AA],borderWidth:2,borderRadius:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'#0d1318',borderColor:'#1e2d3d',borderWidth:1,titleColor:'#eaf4ff',bodyColor:'#c8d8e8',padding:12,titleFont:{family:'Syne',weight:'700'},bodyFont:{family:'Space Mono',size:11},callbacks:{label:ctx=>` ${ctx.parsed.y.toFixed(2)} dB`}}},scales:{x:{grid:{color:gridColor},ticks:{color:textColor,font:{family:'Space Mono',size:10}},border:{color:'#1e2d3d'}},y:{min:30,max:50,grid:{color:gridColor},ticks:{color:textColor,font:{family:'Space Mono',size:10},callback:v=>v+' dB'},border:{color:'#1e2d3d'}}}}});
 
 /* ══════════════════════════════════════════════
-   1. IMAGE GENERATORS
+   WATERMARK MANAGER — REAL API CALLS
 ══════════════════════════════════════════════ */
-const SIZE = 256;
+const API='http://localhost:5000';
+let _file=null,_fileEx=null,_wmBlob=null,_revertBlob=null;
 
-function makeGradient(data) {
-  for (let i = 0; i < SIZE; i++) {
-    for (let j = 0; j < SIZE; j++) {
-      const idx = (i * SIZE + j) * 4;
-      data[idx]   = Math.round(255 * i / SIZE);          // R
-      data[idx+1] = Math.round(255 * j / SIZE);          // G
-      data[idx+2] = Math.round(255 * (1-(i+j)/(2*SIZE)));// B
-      data[idx+3] = 255;
-    }
-  }
-}
+function wmTab(name,btn){document.querySelectorAll('.wm-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.wm-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById('wm-'+name).classList.add('active');}
 
-function makeLena(data) {
-  // Simulated portrait-like image with smooth zones
-  for (let i = 0; i < SIZE; i++) {
-    for (let j = 0; j < SIZE; j++) {
-      const idx = (i * SIZE + j) * 4;
-      const ni = i/SIZE, nj = j/SIZE;
-      // skin tone zone
-      const skin = Math.max(0, 1 - Math.sqrt((ni-0.45)**2 + (nj-0.5)**2)*3);
-      data[idx]   = Math.round(Math.min(255, 200*skin + 80*(1-skin) + 30*Math.sin(ni*12)));
-      data[idx+1] = Math.round(Math.min(255, 150*skin + 60*(1-skin) + 20*Math.sin(nj*10)));
-      data[idx+2] = Math.round(Math.min(255, 120*skin + 40*(1-skin) + 15*Math.cos((ni+nj)*8)));
-      data[idx+3] = 255;
-    }
-  }
-}
+document.getElementById('wmAdaptive').addEventListener('change',function(){const l=document.getElementById('wmApproachLabel');l.textContent=this.checked?'AA — Adaptative (Alleysson)':'GA — Globale (u constant)';l.style.color=this.checked?'var(--aa)':'var(--ga)';});
 
-function makeChecker(data) {
-  for (let i = 0; i < SIZE; i++) {
-    for (let j = 0; j < SIZE; j++) {
-      const idx = (i * SIZE + j) * 4;
-      const cell = (Math.floor(i/32) + Math.floor(j/32)) % 2;
-      const v = cell ? 220 : 40;
-      const r = cell ? 220 : 40 + Math.round(40 * i/SIZE);
-      const g = cell ? 200 : 40 + Math.round(40 * j/SIZE);
-      const b = cell ? 180 : 80;
-      data[idx]=r; data[idx+1]=g; data[idx+2]=b; data[idx+3]=255;
-    }
-  }
-}
+function fakeHex(n){let s='',c='0123456789abcdef';for(let i=0;i<n;i++)s+=c[Math.floor(Math.random()*16)];return s;}
 
-function makeNature(data) {
-  for (let i = 0; i < SIZE; i++) {
-    for (let j = 0; j < SIZE; j++) {
-      const idx = (i * SIZE + j) * 4;
-      const ni = i/SIZE, nj = j/SIZE;
-      // sky top, ground bottom
-      if (ni < 0.45) {
-        // sky
-        data[idx]   = Math.round(100 + 60*ni + 15*Math.sin(nj*20));
-        data[idx+1] = Math.round(160 + 40*ni);
-        data[idx+2] = Math.round(230 - 40*ni + 10*Math.cos(nj*15));
-      } else {
-        // ground with hills
-        const hill = 0.45 + 0.12 * Math.sin(nj * Math.PI * 3);
-        if (ni < hill) {
-          // tree line
-          data[idx]   = Math.round(40 + 20*Math.random()*0.2);
-          data[idx+1] = Math.round(100 + 60*(ni-0.45) + 15*Math.sin(nj*25));
-          data[idx+2] = Math.round(30);
-        } else {
-          // earth
-          data[idx]   = Math.round(120 + 40*ni);
-          data[idx+1] = Math.round(80 + 20*ni);
-          data[idx+2] = Math.round(40);
-        }
-      }
-      data[idx+3] = 255;
-    }
-  }
-}
+/* Drag & drop */
+window.addEventListener('load',()=>{
+  // Encode dropzone
+  const z1=document.getElementById('wmDropzone');
+  const i1=document.getElementById('wmFileInput');
+  z1.addEventListener('click',()=>i1.click());
+  z1.addEventListener('dragover',e=>{e.preventDefault();z1.classList.add('dragover');});
+  z1.addEventListener('dragleave',()=>z1.classList.remove('dragover'));
+  z1.addEventListener('drop',e=>{e.preventDefault();z1.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f)handleFileEncode(f);});
 
-function buildSourceImage(type) {
-  const imgData = new ImageData(SIZE, SIZE);
-  if (type === 'gradient') makeGradient(imgData.data);
-  else if (type === 'lena')  makeLena(imgData.data);
-  else if (type === 'checker') makeChecker(imgData.data);
-  else makeNature(imgData.data);
-  return imgData;
-}
+  // Extract dropzone
+  const z2=document.getElementById('wmDropzoneEx');
+  const i2=document.getElementById('wmFileInputEx');
+  z2.addEventListener('click',()=>i2.click());
+  z2.addEventListener('dragover',e=>{e.preventDefault();z2.classList.add('dragover');});
+  z2.addEventListener('dragleave',()=>z2.classList.remove('dragover'));
+  z2.addEventListener('drop',e=>{e.preventDefault();z2.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f)handleFileDecode(f);});
+});
 
-/* ══════════════════════════════════════════════
-   2. SIMPLIFIED QIM ENGINE (JS port)
-   Works pixel-space per 8×8 block on luminance
-   then redistributes to RGB channels.
-   Sufficient to show visible watermark effect.
-══════════════════════════════════════════════ */
+function onFileSelected(input){if(input.files[0])handleFileEncode(input.files[0]);}
+function onFileSelectedEx(input){if(input.files[0])handleFileDecode(input.files[0]);}
 
-function seededRng(seed) {
-  let s = seed;
-  return function() {
-    s = (s * 1664525 + 1013904223) >>> 0;
-    return s / 0xFFFFFFFF;
+function handleFileEncode(file){
+  _file=file;
+  document.getElementById('wmDropText').textContent=file.name;
+  const r=new FileReader();
+  r.onload=e=>{
+    const src=e.target.result;
+    document.getElementById('wmPreviewImg').src=src;
+    document.getElementById('wmCompareOrig').src=src;
+    const i=new Image();i.onload=()=>{document.getElementById('wmPreviewMeta').innerHTML=`<span>${file.name}</span><br>${i.width} × ${i.height} px<br>${(file.size/1024).toFixed(1)} KB`;};i.src=src;
   };
+  r.readAsDataURL(file);
+  document.getElementById('wmPreviewRow').style.display='flex';
+  document.getElementById('wmResultArea').style.display='none';
+  const out=document.getElementById('wmInsertOutput');
+  out.style.color='#00ff88';
+  out.textContent=`✅ Image sélectionnée : ${file.name}\n→ Configurez les paramètres et cliquez "Insérer le watermark"`;
 }
 
-function generateWatermark(nBits, seed) {
-  const rng = seededRng(seed + 100);
-  const bits = new Uint8Array(nBits);
-  for (let i = 0; i < nBits; i++) bits[i] = rng() > 0.5 ? 1 : 0;
-  return bits;
+function handleFileDecode(file){
+  _fileEx=file;
+  document.getElementById('wmDropTextEx').textContent=file.name;
+  const out=document.getElementById('wmExtractOutput');
+  out.style.color='#00ff88';
+  out.textContent=`✅ Image sélectionnée : ${file.name}`;
 }
 
-// Simplified DCT-domain QIM: apply watermark in spatial domain
-// using block means to simulate DCT coefficient modification
-function encodeWatermark(imgData, wmBits, step, adaptive) {
-  const result = new ImageData(new Uint8ClampedArray(imgData.data), SIZE, SIZE);
-  const nBits = wmBits.length;
-  const BLOCK = 8;
-  const nBlocksX = SIZE / BLOCK;
-  const nBlocksY = SIZE / BLOCK;
+/* ── ENCODE ── */
+async function doInsert(){
+  const pass=document.getElementById('wmPassphrase').value.trim();
+  const n_bits=document.getElementById('wmBits').value;
+  const step=document.getElementById('wmStep').value;
+  const adaptive=document.getElementById('wmAdaptive').checked;
+  const out=document.getElementById('wmInsertOutput');
+  const spinner=document.getElementById('wmInsertSpinner');
+  const btn=document.getElementById('wmInsertBtn');
 
-  let bitIdx = 0;
-  for (let bi = 0; bi < nBlocksY && bitIdx < nBits; bi++) {
-    for (let bj = 0; bj < nBlocksX && bitIdx < nBits; bj++) {
-      const bit = wmBits[bitIdx++];
+  if(!_file){out.style.color='var(--accent2)';out.textContent='❌ Veuillez sélectionner une image.';return;}
+  if(pass.length<6){out.style.color='var(--accent2)';out.textContent='❌ La passphrase doit contenir au moins 6 caractères.';return;}
 
-      // Center pixel of block for adaptive direction
-      const pi = Math.min(Math.round((bi + 0.5) * BLOCK), SIZE-1);
-      const pj = Math.min(Math.round((bj + 0.5) * BLOCK), SIZE-1);
-      const ci = (pi * SIZE + pj) * 4;
-      const R = imgData.data[ci], G = imgData.data[ci+1], B = imgData.data[ci+2];
+  out.style.color='#00ff88';out.textContent='⏳ Envoi à l\'API Flask…';
+  btn.disabled=true;spinner.style.display='inline';
 
-      // Direction vector
-      let uR, uG, uB;
-      if (adaptive) {
-        // Simplified Alleysson: weight by perceptual luminance
-        const lum = 0.299*R + 0.587*G + 0.114*B + 1;
-        uR = (0.299*R/lum); uG = (0.587*G/lum); uB = (0.114*B/lum);
-        const norm = Math.sqrt(uR*uR + uG*uG + uB*uB) || 1;
-        uR/=norm; uG/=norm; uB/=norm;
-      } else {
-        uR = uG = uB = 1/Math.sqrt(3);
-      }
+  try{
+    const fd=new FormData();
+    fd.append('image',_file);
+    fd.append('passphrase',pass);
+    fd.append('n_bits',n_bits);
+    fd.append('step',step);
+    fd.append('adaptive',adaptive?'true':'false');
 
-      // Compute block mean projection S
-      let S = 0, count = 0;
-      for (let dy = 0; dy < BLOCK; dy++) {
-        for (let dx = 0; dx < BLOCK; dx++) {
-          const y = bi*BLOCK+dy, x = bj*BLOCK+dx;
-          if (y >= SIZE || x >= SIZE) continue;
-          const idx = (y*SIZE+x)*4;
-          S += result.data[idx]*uR + result.data[idx+1]*uG + result.data[idx+2]*uB;
-          count++;
-        }
-      }
-      S /= (count || 1);
+    const resp=await fetch(`${API}/encode`,{method:'POST',body:fd});
 
-      // QIM quantize
-      const Sq = step * (Math.round(S/step - bit/2) + bit/2);
-      const delta = Sq - S;
-
-      // Apply back
-      for (let dy = 0; dy < BLOCK; dy++) {
-        for (let dx = 0; dx < BLOCK; dx++) {
-          const y = bi*BLOCK+dy, x = bj*BLOCK+dx;
-          if (y >= SIZE || x >= SIZE) continue;
-          const idx = (y*SIZE+x)*4;
-          result.data[idx]   = Math.max(0,Math.min(255, result.data[idx]   + Math.round(delta*uR)));
-          result.data[idx+1] = Math.max(0,Math.min(255, result.data[idx+1] + Math.round(delta*uG)));
-          result.data[idx+2] = Math.max(0,Math.min(255, result.data[idx+2] + Math.round(delta*uB)));
-        }
-      }
+    if(!resp.ok){
+      let msg=resp.statusText;
+      try{const j=await resp.json();msg=j.error||msg;}catch(e){}
+      throw new Error(msg);
     }
-  }
-  return result;
+
+    // Lire les headers (exposés via Access-Control-Expose-Headers)
+    const sid      = resp.headers.get('X-Session-ID') || '—';
+    const key      = resp.headers.get('X-Owner-Key')  || '—';
+    const psnr     = resp.headers.get('X-PSNR')       || '—';
+    const dwr      = resp.headers.get('X-DWR')        || '—';
+    const bits     = resp.headers.get('X-Bits')       || n_bits;
+    const approach = resp.headers.get('X-Approach')   || (adaptive?'AA':'GA');
+
+    // Garder le blob de l'image tatouée
+    _wmBlob = await resp.blob();
+    const wmUrl = URL.createObjectURL(_wmBlob);
+
+    // Afficher la comparaison avant/après
+    document.getElementById('wmCompareWm').src = wmUrl;
+    document.getElementById('wmCompare').style.display = 'grid';
+
+    // Afficher session ID et clé
+    document.getElementById('wmSessionIdDisplay').textContent = sid;
+    document.getElementById('wmKeyDisplay').textContent = key;
+    document.getElementById('wmResultArea').style.display = 'block';
+
+    // Scroll automatique vers le résultat
+    setTimeout(()=>document.getElementById('wmResultArea').scrollIntoView({behavior:'smooth', block:'start'}), 100);
+
+    out.textContent=`✅ Watermark inséré avec succès !\n──────────────────────────────────────\nFichier   : ${_file.name}\nBits      : ${bits}    Approche : ${approach}\nPas Δ     : ${step}    PSNR     : ${psnr} dB\nDWR       : ${dwr} dB\n──────────────────────────────────────\n⚠️  Notez votre Session ID et Owner Key ci-dessous !`;
+
+  }catch(e){
+    out.style.color='var(--accent2)';
+    const isNetErr = e.message==='Failed to fetch'||e.message.includes('NetworkError');
+    out.textContent = isNetErr
+      ? `❌ Impossible de contacter l'API.\n\nSolution : ouvrez un terminal et lancez :\n  python api.py\n\nPuis rechargez la page sur http://localhost:5000`
+      : `❌ Erreur : ${e.message}`;
+  }finally{btn.disabled=false;spinner.style.display='none';}
 }
 
-function decodeWatermark(imgData, nBits, step, adaptive) {
-  const extracted = new Uint8Array(nBits);
-  const BLOCK = 8;
-  const nBlocksX = SIZE / BLOCK;
-  const nBlocksY = SIZE / BLOCK;
+function downloadWatermarked(){if(!_wmBlob)return;const a=document.createElement('a');a.href=URL.createObjectURL(_wmBlob);a.download=(_file?.name.replace(/\.[^.]+$/,'')||'image')+'_watermarked.png';a.click();}
 
-  let bitIdx = 0;
-  for (let bi = 0; bi < nBlocksY && bitIdx < nBits; bi++) {
-    for (let bj = 0; bj < nBlocksX && bitIdx < nBits; bj++) {
-      const pi = Math.min(Math.round((bi+0.5)*BLOCK), SIZE-1);
-      const pj = Math.min(Math.round((bj+0.5)*BLOCK), SIZE-1);
-      const ci = (pi*SIZE+pj)*4;
-      const R = imgData.data[ci], G = imgData.data[ci+1], B = imgData.data[ci+2];
+/* ── DECODE ── */
+async function doExtract(){
+  const sid=document.getElementById('wmSessionId').value.trim();
+  const key=document.getElementById('wmKey').value.trim();
+  const out=document.getElementById('wmExtractOutput');
+  const spinner=document.getElementById('wmExtractSpinner');
 
-      let uR, uG, uB;
-      if (adaptive) {
-        const lum = 0.299*R + 0.587*G + 0.114*B + 1;
-        uR=(0.299*R/lum); uG=(0.587*G/lum); uB=(0.114*B/lum);
-        const norm = Math.sqrt(uR*uR+uG*uG+uB*uB)||1;
-        uR/=norm; uG/=norm; uB/=norm;
-      } else {
-        uR=uG=uB=1/Math.sqrt(3);
-      }
+  if(!_fileEx){out.style.color='var(--accent2)';out.textContent='❌ Sélectionnez l\'image tatouée.';return;}
+  if(!sid||!key){out.style.color='var(--accent2)';out.textContent='❌ Session ID et Owner Key requis.';return;}
 
-      let S=0, count=0;
-      for (let dy=0;dy<BLOCK;dy++) {
-        for (let dx=0;dx<BLOCK;dx++) {
-          const y=bi*BLOCK+dy, x=bj*BLOCK+dx;
-          if (y>=SIZE||x>=SIZE) continue;
-          const idx=(y*SIZE+x)*4;
-          S += imgData.data[idx]*uR + imgData.data[idx+1]*uG + imgData.data[idx+2]*uB;
-          count++;
-        }
-      }
-      S /= (count||1);
+  out.style.color='#00ff88';out.textContent='⏳ Extraction en cours…';spinner.style.display='inline';
 
-      const q0 = step*(Math.round(S/step));
-      const q1 = step*(Math.round(S/step - 0.5) + 0.5);
-      extracted[bitIdx++] = Math.abs(S-q0) < Math.abs(S-q1) ? 0 : 1;
-    }
-  }
-  return extracted;
+  try{
+    const fd=new FormData();
+    fd.append('image',_fileEx);fd.append('session_id',sid);fd.append('owner_key',key);
+    const resp=await fetch(`${API}/decode`,{method:'POST',body:fd});
+    const data=await resp.json();
+    if(!resp.ok)throw new Error(data.error||resp.statusText);
+
+    const integ=data.ber<0.05?'✓ Intègre':data.ber<0.2?'⚠️ Légèrement dégradé':'❌ Fortement dégradé';
+    out.textContent=`✅ Extraction réussie (clé vérifiée)\n──────────────────────────────────────\nBits : ${data.n_bits}   Approche : ${data.approach}\nBER  : ${data.ber}   ${integ}\n──────────────────────────────────────\n32 premiers bits :\n[${(data.extracted_bits||[]).join(', ')}]`;
+  }catch(e){
+    out.style.color='var(--accent2)';
+    out.textContent=e.message.includes('403')?'❌ Accès refusé — Owner Key incorrecte.':`❌ Erreur : ${e.message}`;
+  }finally{spinner.style.display='none';}
 }
 
-function computeBER(orig, extracted) {
-  let errors = 0;
-  const n = Math.min(orig.length, extracted.length);
-  for (let i=0;i<n;i++) if(orig[i]!==extracted[i]) errors++;
-  return errors/n;
+/* ── REVERT ── */
+async function doRevert(){
+  const sid=document.getElementById('wmSessionId').value.trim();
+  const key=document.getElementById('wmKey').value.trim();
+  const out=document.getElementById('wmExtractOutput');
+  const spinner=document.getElementById('wmExtractSpinner');
+
+  if(!sid||!key){out.style.color='var(--accent2)';out.textContent='❌ Session ID et Owner Key requis.';return;}
+
+  out.style.color='#00ff88';out.textContent='⏳ Reconstruction de l\'image originale…';spinner.style.display='inline';
+
+  try{
+    const fd=new FormData();
+    fd.append('session_id',sid);fd.append('owner_key',key);
+    const resp=await fetch(`${API}/revert`,{method:'POST',body:fd});
+    if(!resp.ok){const e=await resp.json().catch(()=>({error:resp.statusText}));throw new Error(e.error||resp.statusText);}
+    _revertBlob=await resp.blob();
+    document.getElementById('wmRevertDownload').style.display='block';
+    out.textContent=`✅ Image originale rétablie !\n──────────────────────────────────────\nSession : ${sid}\n→ Cliquez "Télécharger" pour récupérer le PNG original.`;
+  }catch(e){
+    out.style.color='var(--accent2)';
+    out.textContent=e.message.includes('403')?'❌ Accès refusé — Owner Key incorrecte.':`❌ Erreur : ${e.message}`;
+  }finally{spinner.style.display='none';}
 }
 
-function computePSNR(orig, wm) {
-  let mse = 0;
-  for (let i=0;i<orig.data.length;i+=4) {
-    for (let c=0;c<3;c++) {
-      const d = orig.data[i+c] - wm.data[i+c];
-      mse += d*d;
-    }
-  }
-  mse /= (SIZE*SIZE*3);
-  if (mse < 1e-10) return 100;
-  return 10*Math.log10(255*255/mse);
-}
+function downloadReverted(){if(!_revertBlob)return;const a=document.createElement('a');a.href=URL.createObjectURL(_revertBlob);a.download='original_reverted.png';a.click();}
+function copyField(id){navigator.clipboard.writeText(document.getElementById(id).textContent).catch(()=>{});}
 
-function computeDWR(orig, wm) {
-  let sumOrig=0, n=0;
-  for (let i=0;i<orig.data.length;i+=4) {
-    for (let c=0;c<3;c++) { sumOrig += orig.data[i+c]; n++; }
-  }
-  const meanOrig = sumOrig/n;
-  let varOrig=0, varDiff=0;
-  for (let i=0;i<orig.data.length;i+=4) {
-    for (let c=0;c<3;c++) {
-      const d = orig.data[i+c] - meanOrig;
-      varOrig += d*d;
-      const dd = orig.data[i+c] - wm.data[i+c];
-      varDiff += dd*dd;
-    }
-  }
-  if (varDiff < 1) return 999;
-  return 10*Math.log10(varOrig/varDiff);
-}
-
-/* ══════════════════════════════════════════════
-   3. ATTACK SIMULATION
-══════════════════════════════════════════════ */
-function attackGaussian(imgData, sigma) {
-  const result = new ImageData(new Uint8ClampedArray(imgData.data), SIZE, SIZE);
-  for (let i=0;i<result.data.length;i+=4) {
-    for (let c=0;c<3;c++) {
-      // Box-Muller
-      const u1 = Math.random()||1e-10, u2 = Math.random();
-      const noise = sigma * Math.sqrt(-2*Math.log(u1)) * Math.cos(2*Math.PI*u2);
-      result.data[i+c] = Math.max(0, Math.min(255, Math.round(result.data[i+c]+noise)));
-    }
-  }
-  return result;
-}
-
-function attackJPEG(srcCanvas, quality) {
-  // Simulate JPEG by re-encoding to data URL and drawing back
-  // We simulate the effect with block quantization
-  const tmp = document.createElement('canvas');
-  tmp.width = tmp.height = SIZE;
-  const ctx = tmp.getContext('2d');
-  ctx.putImageData(srcCanvas, 0, 0);
-
-  // Simulate JPEG quantization artifact: block-average then add back
-  const out = ctx.getImageData(0,0,SIZE,SIZE);
-  const BLOCK = quality < 80 ? 4 : 2;
-  for (let bi=0;bi<SIZE;bi+=BLOCK) {
-    for (let bj=0;bj<SIZE;bj+=BLOCK) {
-      let sumR=0,sumG=0,sumB=0,cnt=0;
-      for (let dy=0;dy<BLOCK&&bi+dy<SIZE;dy++) {
-        for (let dx=0;dx<BLOCK&&bj+dx<SIZE;dx++) {
-          const idx=((bi+dy)*SIZE+(bj+dx))*4;
-          sumR+=out.data[idx]; sumG+=out.data[idx+1]; sumB+=out.data[idx+2];
-          cnt++;
-        }
-      }
-      const avgR=sumR/cnt, avgG=sumG/cnt, avgB=sumB/cnt;
-      const noise = (100-quality)*0.3;
-      for (let dy=0;dy<BLOCK&&bi+dy<SIZE;dy++) {
-        for (let dx=0;dx<BLOCK&&bj+dx<SIZE;dx++) {
-          const idx=((bi+dy)*SIZE+(bj+dx))*4;
-          out.data[idx]   = Math.max(0,Math.min(255, Math.round(avgR + (out.data[idx]-avgR)*0.6 + (Math.random()-0.5)*noise)));
-          out.data[idx+1] = Math.max(0,Math.min(255, Math.round(avgG + (out.data[idx+1]-avgG)*0.6 + (Math.random()-0.5)*noise)));
-          out.data[idx+2] = Math.max(0,Math.min(255, Math.round(avgB + (out.data[idx+2]-avgB)*0.6 + (Math.random()-0.5)*noise)));
-        }
-      }
-    }
-  }
-  return out;
-}
-
-/* ══════════════════════════════════════════════
-   4. CANVAS RENDERING HELPERS
-══════════════════════════════════════════════ */
-function drawToCanvas(canvasId, imgData) {
-  const canvas = document.getElementById(canvasId);
-  const ctx = canvas.getContext('2d');
-  canvas.width = SIZE; canvas.height = SIZE;
-  ctx.putImageData(imgData, 0, 0);
-}
-
-function drawToSmallCanvas(canvasId, imgData) {
-  const canvas = document.getElementById(canvasId);
-  canvas.width = 128; canvas.height = 128;
-  const ctx = canvas.getContext('2d');
-  // Draw 256→128
-  const tmp = document.createElement('canvas');
-  tmp.width=SIZE; tmp.height=SIZE;
-  tmp.getContext('2d').putImageData(imgData, 0, 0);
-  ctx.drawImage(tmp, 0, 0, 128, 128);
-}
-
-function makeDiffCanvas(orig, wm, amplify) {
-  const result = new ImageData(SIZE, SIZE);
-  for (let i=0;i<orig.data.length;i+=4) {
-    for (let c=0;c<3;c++) {
-      result.data[i+c] = Math.min(255, Math.abs(orig.data[i+c]-wm.data[i+c])*amplify);
-    }
-    result.data[i+3]=255;
-  }
-  return result;
-}
-
-function makeSideBySideDiff(origImgData, gaImgData, aaImgData) {
-  // Left half = GA diff, Right half = AA diff
-  const result = new ImageData(SIZE, SIZE);
-  const gaD = makeDiffCanvas(origImgData, gaImgData, 10);
-  const aaD = makeDiffCanvas(origImgData, aaImgData, 10);
-  for (let i=0;i<SIZE;i++) {
-    for (let j=0;j<SIZE;j++) {
-      const idx=(i*SIZE+j)*4;
-      const src = j < SIZE/2 ? gaD : aaD;
-      result.data[idx]   = src.data[idx];
-      result.data[idx+1] = src.data[idx+1];
-      result.data[idx+2] = src.data[idx+2];
-      result.data[idx+3] = 255;
-    }
-  }
-  // Draw divider line
-  for (let i=0;i<SIZE;i++) {
-    const idx=(i*SIZE+SIZE/2)*4;
-    result.data[idx]=0; result.data[idx+1]=229; result.data[idx+2]=255; result.data[idx+3]=255;
-  }
-  return result;
-}
-
-/* ══════════════════════════════════════════════
-   5. MAIN GENERATION FUNCTION
-══════════════════════════════════════════════ */
-async function generateAll() {
-  const btn = document.getElementById('genBtn');
-  const prog = document.getElementById('genProgress');
-  const bar  = document.getElementById('genBar');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span>Génération...';
-  prog.classList.add('active');
-
-  await new Promise(r => setTimeout(r, 20));
-
-  const step    = parseFloat(document.getElementById('stepSlider').value);
-  const nBits   = parseInt(document.getElementById('bitsSlider').value);
-  const imgType = document.getElementById('imgType').value;
-  const SEED    = 42;
-
-  // Build source
-  bar.style.width = '10%';
-  const srcImgData = buildSourceImage(imgType);
-  drawToCanvas('canvasOrig', srcImgData);
-  document.getElementById('metaOrig').innerHTML =
-    `<span class="bright">256 × 256</span> · 3 canaux RGB<br>Type: <span class="bright">${imgType}</span>`;
-
-  await new Promise(r => setTimeout(r, 10));
-
-  // Watermark bits
-  const wmBits = generateWatermark(nBits, SEED);
-  bar.style.width = '25%';
-
-  // GA Encode
-  await new Promise(r => setTimeout(r, 10));
-  const gaImg = encodeWatermark(srcImgData, wmBits, step, false);
-  bar.style.width = '45%';
-
-  // AA Encode
-  await new Promise(r => setTimeout(r, 10));
-  const aaImg = encodeWatermark(srcImgData, wmBits, step, true);
-  bar.style.width = '60%';
-
-  // Draw GA & AA
-  drawToCanvas('canvasGA', gaImg);
-  drawToCanvas('canvasAA', aaImg);
-
-  // Metrics
-  const psnrGA = computePSNR(srcImgData, gaImg);
-  const psnrAA = computePSNR(srcImgData, aaImg);
-  const dwrGA  = computeDWR(srcImgData, gaImg);
-  const dwrAA  = computeDWR(srcImgData, aaImg);
-
-  document.getElementById('psnrGA').textContent = psnrGA.toFixed(2) + ' dB';
-  document.getElementById('dwrGA').textContent  = dwrGA.toFixed(2) + ' dB';
-  document.getElementById('psnrAA').textContent = psnrAA.toFixed(2) + ' dB';
-  document.getElementById('dwrAA').textContent  = dwrAA.toFixed(2) + ' dB';
-
-  // Diff canvas (side-by-side: left=GA, right=AA)
-  const diffImg = makeSideBySideDiff(srcImgData, gaImg, aaImg);
-  drawToCanvas('canvasDiff', diffImg);
-  document.getElementById('metaDiff').innerHTML =
-    `Amplifiée ×10 &nbsp;|&nbsp; <span style="color:var(--ga)">■</span> GA (gauche) &nbsp; <span style="color:var(--aa)">■</span> AA (droite)`;
-
-  bar.style.width = '75%';
-  await new Promise(r => setTimeout(r, 10));
-
-  // ── Attack previews ──
-  drawToSmallCanvas('atkOrig', aaImg);
-
-  // JPEG 90
-  const atk90 = attackJPEG(aaImg, 90);
-  drawToSmallCanvas('atkJpeg90', atk90);
-  const ext90 = decodeWatermark(atk90, nBits, step, true);
-  const ber90 = computeBER(wmBits, ext90);
-  document.getElementById('berJpeg90').textContent = `BER: ${ber90.toFixed(3)}`;
-  document.getElementById('berJpeg90').style.color = ber90 < 0.05 ? 'var(--accent3)' : '#f0c040';
-
-  // JPEG 70
-  bar.style.width = '82%';
-  await new Promise(r => setTimeout(r, 10));
-  const atk70 = attackJPEG(aaImg, 70);
-  drawToSmallCanvas('atkJpeg70', atk70);
-  const ext70 = decodeWatermark(atk70, nBits, step, true);
-  const ber70 = computeBER(wmBits, ext70);
-  document.getElementById('berJpeg70').textContent = `BER: ${ber70.toFixed(3)}`;
-  document.getElementById('berJpeg70').style.color = ber70 < 0.15 ? '#f0c040' : 'var(--aa)';
-
-  // Gauss 5
-  const atkg5 = attackGaussian(aaImg, 5);
-  drawToSmallCanvas('atkGauss5', atkg5);
-  const extg5 = decodeWatermark(atkg5, nBits, step, true);
-  const berg5 = computeBER(wmBits, extg5);
-  document.getElementById('berGauss5').textContent = `BER: ${berg5.toFixed(3)}`;
-  document.getElementById('berGauss5').style.color = berg5 < 0.05 ? 'var(--accent3)' : '#f0c040';
-
-  // Gauss 15
-  bar.style.width = '92%';
-  await new Promise(r => setTimeout(r, 10));
-  const atkg15 = attackGaussian(aaImg, 15);
-  drawToSmallCanvas('atkGauss15', atkg15);
-  const extg15 = decodeWatermark(atkg15, nBits, step, true);
-  const berg15 = computeBER(wmBits, extg15);
-  document.getElementById('berGauss15').textContent = `BER: ${berg15.toFixed(3)}`;
-  document.getElementById('berGauss15').style.color = berg15 < 0.2 ? '#f0c040' : 'var(--aa)';
-
-  bar.style.width = '100%';
-  await new Promise(r => setTimeout(r, 300));
-
-  prog.classList.remove('active');
-  bar.style.width = '0%';
-  btn.disabled = false;
-  btn.innerHTML = '▶ Régénérer';
-}
-
-/* ── Auto-generate on load ── */
-window.addEventListener('load', () => setTimeout(generateAll, 600));
-
-/* ══════════════════════════════════════════════
-   6. CHARTS (Chart.js)
-══════════════════════════════════════════════ */
-const gridColor = 'rgba(30,45,61,0.8)';
-const textColor = '#4a6070';
-const GA = '#4d9fff', AA = '#ff6b6b', RAND = 'rgba(100,100,100,0.4)';
-
-const baseOpts = {
-  responsive:true, maintainAspectRatio:false,
-  interaction:{mode:'index',intersect:false},
-  plugins:{
-    legend:{display:false},
-    tooltip:{
-      backgroundColor:'#0d1318', borderColor:'#1e2d3d', borderWidth:1,
-      titleColor:'#eaf4ff', bodyColor:'#c8d8e8', padding:12,
-      titleFont:{family:'Syne',weight:'700'},
-      bodyFont:{family:'Space Mono',size:11},
-    }
-  },
-  scales:{
-    x:{ grid:{color:gridColor}, ticks:{color:textColor,font:{family:'Space Mono',size:10}}, border:{color:'#1e2d3d'} },
-    y:{ min:0,max:0.55, grid:{color:gridColor}, ticks:{color:textColor,font:{family:'Space Mono',size:10},callback:v=>v.toFixed(2)}, border:{color:'#1e2d3d'} }
-  }
+/* ══ API REST JS ══ */
+const CURL_EXAMPLES={
+  encode:{label:'/encode',code:`<span class="kw">curl</span> <span class="opt">-X POST</span> <span class="url">http://localhost:5000/encode</span> \\\n  <span class="opt">-F</span> <span class="str">"image=@photo.png"</span> \\\n  <span class="opt">-F</span> <span class="str">"passphrase=monsecret"</span> \\\n  <span class="opt">-F</span> <span class="str">"n_bits=128"</span> \\\n  <span class="opt">-F</span> <span class="str">"adaptive=true"</span> \\\n  <span class="opt">-D</span> headers.txt <span class="opt">-o</span> watermarked.png\n\n<span class="kw"># Headers réponse :</span>\n<span class="opt">X-Session-ID:</span> <span class="str">a3f812c0d9e14b2f</span>\n<span class="opt">X-Owner-Key :</span> <span class="str">7c3a9f…d841</span>\n<span class="opt">X-PSNR      :</span> <span class="str">43.71</span>  <span class="opt">X-Approach:</span> <span class="str">AA</span>`},
+  decode:{label:'/decode',code:`<span class="kw">curl</span> <span class="opt">-X POST</span> <span class="url">http://localhost:5000/decode</span> \\\n  <span class="opt">-F</span> <span class="str">"image=@watermarked.png"</span> \\\n  <span class="opt">-F</span> <span class="str">"session_id=a3f812c0d9e14b2f"</span> \\\n  <span class="opt">-F</span> <span class="str">"owner_key=7c3a9f…d841"</span>\n\n{ <span class="json-key">"ber"</span>:<span class="json-num">0.0078</span>, <span class="json-key">"integrity"</span>:"<span class="json-str">ok</span>", <span class="json-key">"approach"</span>:"<span class="json-str">AA</span>" }`},
+  revert:{label:'/revert',code:`<span class="kw">curl</span> <span class="opt">-X POST</span> <span class="url">http://localhost:5000/revert</span> \\\n  <span class="opt">-F</span> <span class="str">"session_id=a3f812c0d9e14b2f"</span> \\\n  <span class="opt">-F</span> <span class="str">"owner_key=7c3a9f…d841"</span> \\\n  <span class="opt">-o</span> original_reverted.png`},
+  attacks:{label:'/attack/jpeg & /attack/gaussian',code:`<span class="kw">curl</span> <span class="opt">-X POST</span> <span class="url">http://localhost:5000/attack/jpeg</span> \\\n  <span class="opt">-F</span> <span class="str">"image=@wm.png"</span> <span class="opt">-F</span> <span class="str">"quality=70"</span> <span class="opt">-o</span> atk.png\n\n<span class="kw">curl</span> <span class="opt">-X POST</span> <span class="url">http://localhost:5000/attack/gaussian</span> \\\n  <span class="opt">-F</span> <span class="str">"image=@wm.png"</span> <span class="opt">-F</span> <span class="str">"sigma=10"</span> <span class="opt">-o</span> atk_g.png`},
+  metrics:{label:'/metrics',code:`<span class="kw">curl</span> <span class="opt">-X POST</span> <span class="url">http://localhost:5000/metrics</span> \\\n  <span class="opt">-F</span> <span class="str">"original=@photo.png"</span> \\\n  <span class="opt">-F</span> <span class="str">"watermarked=@wm.png"</span>\n\n{ <span class="json-key">"psnr"</span>:<span class="json-num">43.71</span>, <span class="json-key">"dwr"</span>:<span class="json-num">40.10</span>, <span class="json-key">"ber"</span>:<span class="json-num">0.0078</span> }`},
+  health:{label:'/health',code:`<span class="kw">curl</span> <span class="url">http://localhost:5000/health</span>\n\n{ <span class="json-key">"status"</span>:"<span class="json-str">ok</span>", <span class="json-key">"version"</span>:"<span class="json-str">1.0.0</span>" }`}
 };
+function showCurl(k,card){document.querySelectorAll('.api-card').forEach(c=>c.classList.remove('active'));card.classList.add('active');document.getElementById('curlCode').innerHTML=CURL_EXAMPLES[k].code;document.getElementById('curlEndpointLabel').textContent=CURL_EXAMPLES[k].label;}
+document.getElementById('curlCode').innerHTML=CURL_EXAMPLES['encode'].code;
+function copyCurl(){navigator.clipboard.writeText(document.getElementById('curlCode').textContent).catch(()=>{});const b=document.querySelector('.curl-copy');b.textContent='✓ Copié';setTimeout(()=>b.textContent='📋 Copier',1500);}
 
-const jpegQ  = [70,75,80,85,90,95,100];
-const jpegGA = [0.1953,0.1484,0.0703,0.0391,0.0156,0.0078,0.0];
-const jpegAA = [0.1406,0.1016,0.0469,0.0234,0.0078,0.0,0.0];
-new Chart(document.getElementById('jpegChart'),{
-  type:'line',
-  data:{
-    labels:jpegQ.map(q=>`q=${q}`),
-    datasets:[
-      {label:'GA',data:jpegGA,borderColor:GA,backgroundColor:GA+'18',borderWidth:2,pointRadius:4,pointBackgroundColor:GA,fill:true,tension:0.3},
-      {label:'AA',data:jpegAA,borderColor:AA,backgroundColor:AA+'18',borderWidth:2,pointRadius:4,pointBackgroundColor:AA,fill:true,tension:0.3},
-      {label:'Aléatoire',data:jpegQ.map(()=>0.5),borderColor:RAND,borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}
-    ]
-  },
-  options:{...baseOpts}
-});
-
-const sigmas  = [0,2,4,6,8,10,12,14,16,18,20];
-const gaussGA = [0.0,0.0078,0.0234,0.0625,0.1094,0.2266,0.2969,0.3438,0.3750,0.3906,0.4063];
-const gaussAA = [0.0,0.0,0.0156,0.0391,0.0859,0.1875,0.2578,0.3047,0.3359,0.3594,0.3672];
-new Chart(document.getElementById('gaussChart'),{
-  type:'line',
-  data:{
-    labels:sigmas.map(s=>`σ=${s}`),
-    datasets:[
-      {label:'GA',data:gaussGA,borderColor:GA,backgroundColor:GA+'18',borderWidth:2,pointRadius:3,pointBackgroundColor:GA,fill:true,tension:0.3},
-      {label:'AA',data:gaussAA,borderColor:AA,backgroundColor:AA+'18',borderWidth:2,pointRadius:3,pointBackgroundColor:AA,fill:true,tension:0.3},
-      {label:'Aléatoire',data:sigmas.map(()=>0.5),borderColor:RAND,borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}
-    ]
-  },
-  options:{...baseOpts}
-});
-
-new Chart(document.getElementById('dwrChart'),{
-  type:'bar',
-  data:{
-    labels:['PSNR — GA','PSNR — AA','DWR — GA','DWR — AA'],
-    datasets:[{
-      data:[41.24,43.71,38.50,40.10],
-      backgroundColor:[GA+'aa',AA+'aa',GA+'aa',AA+'aa'],
-      borderColor:[GA,AA,GA,AA],
-      borderWidth:2, borderRadius:0,
-    }]
-  },
-  options:{
-    responsive:true, maintainAspectRatio:false,
-    plugins:{legend:{display:false},tooltip:{
-      backgroundColor:'#0d1318',borderColor:'#1e2d3d',borderWidth:1,
-      titleColor:'#eaf4ff',bodyColor:'#c8d8e8',padding:12,
-      titleFont:{family:'Syne',weight:'700'},
-      bodyFont:{family:'Space Mono',size:11},
-      callbacks:{label:ctx=>` ${ctx.parsed.y.toFixed(2)} dB`}
-    }},
-    scales:{
-      x:{grid:{color:gridColor},ticks:{color:textColor,font:{family:'Space Mono',size:10}},border:{color:'#1e2d3d'}},
-      y:{min:30,max:50,grid:{color:gridColor},ticks:{color:textColor,font:{family:'Space Mono',size:10},callback:v=>v+' dB'},border:{color:'#1e2d3d'}}
-    }
+async function testHealth(){
+  const out=document.getElementById('apiResponse');
+  out.style.color='#00ff88';out.textContent='⏳ GET http://localhost:5000/health …';
+  try{
+    const resp=await fetch(`${API}/health`);
+    const data=await resp.json();
+    out.textContent=`HTTP/1.1 ${resp.status} OK\nContent-Type: application/json\n\n${JSON.stringify(data,null,2)}`;
+  }catch(e){
+    out.style.color='var(--accent2)';
+    out.textContent=`❌ Impossible de contacter l'API\n${e.message}\n\nVérifiez que python api.py est lancé.`;
   }
-});
+}
+
+function testEncodeDemo(){const out=document.getElementById('apiResponse');out.style.color='#00ff88';out.textContent='⏳ POST http://localhost:5000/encode …';setTimeout(()=>{const sid=fakeHex(16),key=fakeHex(64),psnr=(43+Math.random()*2-1).toFixed(2),dwr=(40+Math.random()*2-1).toFixed(2);out.textContent=`HTTP/1.1 200 OK\nContent-Type: image/png\nX-Session-ID: ${sid}\nX-Owner-Key : ${key}\nX-PSNR      : ${psnr}\nX-DWR       : ${dwr}\nX-Bits      : 128\nX-Approach  : AA\n\n[image/png — watermarked.png téléchargé]`;},800);}
 </script>
 </body>
 </html>
