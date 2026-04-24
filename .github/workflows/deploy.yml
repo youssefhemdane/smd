@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,32 +16,22 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
+      - name: Install dependencies into antenv
         run: |
+          python -m venv antenv
+          source antenv/bin/activate
           pip install -r requirements.txt
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4        # ← changed from v3
-        with:
-          name: python-app
-          path: .
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4      # ← changed from v3
-        with:
-          name: python-app
+      - name: Zip artifact for deployment
+        run: zip -r release.zip . --exclude "*.git*"
 
       - name: Log in to Azure
-        uses: azure/login@v1
+        uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with:
           app-name: 'ProjSMD1'
-          package: .
+          package: release.zip
